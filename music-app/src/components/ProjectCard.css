@@ -1,12 +1,13 @@
 .music-card {
     display: flex;
-    width: 600px;
-    height: 300px;
+    width: 27vw;
+    height: 20vw;
     border-radius: 20px;
     background-color: #f5fff9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     font-family: "Segoe UI", sans-serif;
+    margin: 2vw;
   }
   
   /* Left square area */
