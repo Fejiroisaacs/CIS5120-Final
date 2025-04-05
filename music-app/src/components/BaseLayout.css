@@ -1,0 +1,50 @@
+.layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+width: 64px;
+background-color: #01B0B0;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 16px 0;
+}
+
+.top-icons,
+.bottom-icons {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+}
+
+.icon-button {
+color: black;
+}
+
+.icon-button.active {
+background-color: #D8FCFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button.active svg {
+color: black;
+}
+
+.main-content {
+flex: 1;
+background-color: white;
+}
+
+.top-bar {
+background-color: #D8FCFF;
+height: 100px;
+width: 100%;
+}
+
+.page-content {
+padding: 16px;
+}
