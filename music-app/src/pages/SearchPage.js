@@ -20,18 +20,56 @@ const baseContext = {
 
 export const FilterContext = createContext();
 
-const SearchResults = () => {
+const SearchResults = ({filters, data}) => {
+
+  const filterSongs = (songs, filters) => {
+    return songs.filter(song => {
+      // Check Genre filters (note the capitalization)
+      const genreMatch = checkCategory(song.genres, filters.Genre);
+      if (!genreMatch) return false;
+  
+      // Check Instruments filters (note the capitalization and plural vs singular)
+      const instrumentMatch = checkCategory(song.instruments, filters.Instruments);
+      if (!instrumentMatch) return false;
+  
+      return true;
+    });
+  };
+  
+  const checkCategory = (songItems, filterItems) => {
+    const included = [];
+    const excluded = [];
+  
+    // Process filter items
+    for (const [name, status] of Object.entries(filterItems)) {
+      if (status === "include") included.push(name);
+      if (status === "exclude") excluded.push(name);
+    }
+  
+    // Reject if song contains any excluded items
+    if (excluded.some(item => songItems.includes(item))) {
+      return false;
+    }
+  
+    // If includes exist, song must have at least one
+    if (included.length > 0 && !included.some(item => songItems.includes(item))) {
+      return false;
+    }
+  
+    return true;
+  };
+  
+  // Usage:
+  const musicProjects = filterSongs(data, filters);
+
   return (<div className="search-results">
-     <div>
       {musicProjects.map((project, index) => (
         <ProjectCard
           key={index}
           title={project.title}
           members={project.members}
-          tags={project.tags}
-        />
-      ))}
-    </div>
+          tags={project.genres}
+        />))}
   </div>)
 }
 
@@ -44,7 +82,7 @@ const SearchPage = () => {
         genres={genres}
         instruments={instruments}
       />
-      <SearchResults />
+      <SearchResults filters={filters} data={musicProjects}/>
     </FilterContext.Provider>
   );
 };
