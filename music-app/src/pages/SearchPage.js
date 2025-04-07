@@ -22,7 +22,7 @@ export const FilterContext = createContext();
 
 const SearchResults = () => {
   return (<div className="search-results">
-     <div style={{ padding: "2rem" }}>
+     <div>
       {musicProjects.map((project, index) => (
         <ProjectCard
           key={index}
