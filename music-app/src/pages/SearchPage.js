@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import "../components/Style.css";
 import ProjectCard from "../components/ProjectCard";
+import musicProjects from "../data/musicProjects.js";
 import NavBar from '../components/navbar/NavBar';
 
 const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
@@ -21,31 +22,16 @@ export const FilterContext = createContext();
 
 const SearchResults = () => {
   return (<div className="search-results">
-    <ProjectCard
-      title="DISCO PRINCE"
-      members={["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]}
-      tags={["Pop", "Indie"]}
-    />
-    <ProjectCard
-      title="DISCO PRINCE"
-      members={["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]}
-      tags={["Pop", "Indie"]}
-    />
-    <ProjectCard
-      title="DISCO PRINCE"
-      members={["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]}
-      tags={["Pop", "Indie"]}
-    />
-    <ProjectCard
-      title="DISCO PRINCE"
-      members={["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]}
-      tags={["Pop", "Indie"]}
-    />
-    <ProjectCard
-      title="DISCO PRINCE"
-      members={["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]}
-      tags={["Pop", "Indie"]}
-    />
+     <div style={{ padding: "2rem" }}>
+      {musicProjects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          title={project.title}
+          members={project.members}
+          tags={project.tags}
+        />
+      ))}
+    </div>
   </div>)
 }
 

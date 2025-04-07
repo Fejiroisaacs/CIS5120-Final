@@ -1,20 +1,22 @@
 .filter-bubble {
-    height: 24px;
+    height: 4vh;
     display: inline-block;
     text-align: center;
-    justify-content:center;
-    align-items:center;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 12px;
-
-    font-family: "Segoe UI", sans-serif;
+    vertical-align: middle;
+    line-height: 4vh;  
+    padding-left: .5vw;
+    padding-right: .5vw;
+    border-radius: 2vh;
+    font-size: 2.5vh;
+    font-family: "Montserrat", sans-serif;
 }
 
-.include {
-    background-color: green;
+.include-bubble {
+    background-color: #3EEAA3;
+    border-color: #205E42;
 }
 
-.exclude {
-    background-color: rgb(255, 182, 182);
+.exclude-bubble {
+    background-color: #EE9292;
+    border-color: #813333;
 }
