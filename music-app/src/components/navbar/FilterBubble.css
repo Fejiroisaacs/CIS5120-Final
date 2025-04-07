@@ -1,0 +1,20 @@
+.filter-bubble {
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 12px;
+
+    font-family: "Segoe UI", sans-serif;
+}
+
+.include {
+    background-color: green;
+}
+
+.exclude {
+    background-color: rgb(255, 182, 182);
+}

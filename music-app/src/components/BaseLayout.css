@@ -45,16 +45,9 @@
     background-color: white;
 }
 
-.top-bar {
-    background-color: #D8FCFF;
-    height: 10vh;
-    width: 100%;
-}
-
 .page-content {
-    padding: 16px;
     max-width: 96vw;
-    max-height: 90vh;
+    max-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
