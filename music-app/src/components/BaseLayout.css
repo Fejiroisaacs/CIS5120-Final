@@ -27,6 +27,14 @@
     gap: 16px;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-items: center;
+  }
+
 .icon-button {
     color: black;
 }

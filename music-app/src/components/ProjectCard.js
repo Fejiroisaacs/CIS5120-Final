@@ -1,25 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProjectCard.css";
 
-const ProjectCard = ({ title, members, tags }) => {
-  return (
-    <div className="music-card">
-      <div className="card-right">
-        <h2 className="project-title">{title}</h2>
-        <div className="members-box">
-          <strong>MEMBERS:</strong>
-          <ul>
-            {members.map((member, index) => (
-              <li key={index}>{member}</li>
+const ProjectCard = ({ title, members, tags, image, runtime, creationDate }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleCardClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+    return (
+    <>
+      {isExpanded && <div className="card-backdrop" onClick={handleCardClick} />}
+      <div
+        className={`music-card ${isExpanded ? "expanded" : ""}`}
+        onClick={handleCardClick}
+      >
+        <div className="card-left">
+          <img src={image} alt={`${title} cover`} className="album-image" />
+        </div>
+        <div className="card-right">
+        <h2>{title}</h2>
+        <div className="text-box">
+          <p><strong>Members:</strong></p>
+          <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+            {members.map((member, idx) => (
+              <li key={idx}>{member}</li>
             ))}
           </ul>
+          <div className="tags">
+            {tags.map((tag, index) => (
+              <span className="tag" key={index}>{tag}</span>
+            ))}
+          </div>
+          {isExpanded && (
+            <div className="extra-info">
+              <p><strong>Runtime:</strong> {runtime}</p>
+              <p><strong>Created on:</strong> {creationDate}</p>
+            </div>
+          )}
         </div>
-        <div className="tags-box">
-          <strong>TAGS:</strong>
-          <p>{tags.join(", ")}</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

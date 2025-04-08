@@ -1,8 +1,13 @@
 import React from 'react';
+import PageHeader from "../components/navbar/PageHeader.js";
 import "../components/Style.css";
 
 const ChatPage = () => {
-  return <h1>Chat Page 🎶</h1>;
+  return (
+    <div>
+      <PageHeader title="MY GROUPS" />
+    </div>
+  );
 };
 
 export default ChatPage;

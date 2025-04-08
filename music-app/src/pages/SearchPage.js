@@ -69,6 +69,7 @@ const SearchResults = ({filters, data}) => {
           title={project.title}
           members={project.members}
           tags={project.genres}
+          image={project.image}
         />))}
   </div>)
 }
