@@ -1,65 +1,97 @@
 .music-card {
-    display: flex;
-    width: 27vw;
-    height: 20vw;
-    border-radius: 20px;
-    background-color: #f5fff9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: "Segoe UI", sans-serif;
-    margin: 2vw;
-  }
-  
-  /* Left square area */
-  .card-left {
-    width: 50%;
-    background-color: #f5fff9;
-  }
-  
-  /* Right info area */
-  .card-right {
-    width: 50%;
-    background-color: #ddfceb;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .project-title {
-    margin: 0 0 20px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #4a4a4a;
-  }
-  
-  .members-box {
-    background-color: white;
-    border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 0 1px #ccc;
-  }
-  
-  .members-box ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 10px;
-  }
-  
-  .members-box li {
-    margin-bottom: 4px;
-    font-size: 16px;
-  }
-  
-  .tags-box {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .tags-box strong {
-    color: #777;
-    display: block;
-    margin-bottom: 4px;
-  }
+  display: flex;
+  flex-direction: row;
+  background-color: #f1fdf6;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  max-width: 700px;
+  transition: transform 0.3s ease, max-width 0.3s ease, box-shadow 0.3s ease;
+  z-index: 15;
+  cursor: pointer;
+  position: relative;
+}
+
+.music-card.expanded {
+  max-width: 90vw;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.card-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.text-box {
+  background-color: #ffffffd5; /* semi-transparent white */
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.album-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #d8fcff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.extra-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Backdrop blur */
+.card-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.members ul {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.members li {
+  margin: 0.2rem 0;
+  padding: 0;
+}

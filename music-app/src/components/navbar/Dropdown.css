@@ -1,6 +1,7 @@
 .dropdown {
     display: flex;
     flex-direction: column;
+    z-index: 100px;
 }
 
 .header {

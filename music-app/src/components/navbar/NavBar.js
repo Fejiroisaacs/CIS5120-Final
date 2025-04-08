@@ -32,7 +32,7 @@ const NavBar = ({ genres, instruments }) => {
             <Typography
                 fontFamily={"Montserrat, sans-serif"}
                 fontSize={"36px"}
-            >FILTERS:</Typography>
+            >SEARCH PROJECTS</Typography>
             <Dropdown name="Genre" entries={genres}></Dropdown>
             <Dropdown name="Instruments" entries={instruments}></Dropdown>
             <Bubbles />
