@@ -7,7 +7,7 @@ import NavBar from '../components/navbar/NavBar';
 const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
 const instruments = ["Vocals", "Guitar", "Piano", "Bass", "Drums"];
 
-const baseContext = {
+export const baseContext = {
   "Genre": genres.reduce((acc, genre) => {
     acc[genre] = "off";
     return acc;
