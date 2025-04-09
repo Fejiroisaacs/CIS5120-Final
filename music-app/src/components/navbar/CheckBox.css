@@ -32,6 +32,7 @@ p {
     height: 2vw;
     align-items: center;
     border: solid 2px;
+    border-radius: 10px;
 }
 
 .include {
