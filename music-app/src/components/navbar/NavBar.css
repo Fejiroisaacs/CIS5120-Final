@@ -32,4 +32,9 @@
     border-color: #BFC6E2;
     border-radius: 2vh;
     margin-top: .75vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
