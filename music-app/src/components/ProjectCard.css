@@ -14,10 +14,21 @@
 }
 
 .music-card.expanded {
-  max-width: 90vw;
-  transform: scale(1.05);
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;       /* Wider than tall */
+  max-width: 1200px;
+  height: 50vh;       /* Keep the rectangle shape */
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .card-left {
@@ -94,4 +105,10 @@
 .members li {
   margin: 0.2rem 0;
   padding: 0;
+}
+
+.blurred {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+  pointer-events: none; /* Optional: makes sure the blurred cards can't be clicked */
 }

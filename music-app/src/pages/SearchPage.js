@@ -7,7 +7,7 @@ import NavBar from '../components/navbar/NavBar';
 const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
 const instruments = ["Vocals", "Guitar", "Piano", "Bass", "Drums"];
 
-const baseContext = {
+export const baseContext = {
   "Genre": genres.reduce((acc, genre) => {
     acc[genre] = "off";
     return acc;
@@ -20,7 +20,7 @@ const baseContext = {
 
 export const FilterContext = createContext();
 
-const SearchResults = ({filters, data}) => {
+const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
 
   const filterSongs = (songs, filters) => {
     return songs.filter(song => {
@@ -62,7 +62,8 @@ const SearchResults = ({filters, data}) => {
   // Usage:
   const musicProjects = filterSongs(data, filters);
 
-  return (<div className="search-results">
+  return (
+    <div className="search-results">
       {musicProjects.map((project, index) => (
         <ProjectCard
           key={index}
@@ -70,20 +71,31 @@ const SearchResults = ({filters, data}) => {
           members={project.members}
           tags={project.genres}
           image={project.image}
-        />))}
-  </div>)
+          runtime={project.runtime}
+          creationDate={project.creationDate}
+          isExpanded={expandedTitle === project.title}
+          onExpand={() => setExpandedTitle(project.title)}
+          onCollapse={() => setExpandedTitle(null)}
+          blurred={expandedTitle !== null && expandedTitle !== project.title}
+        />
+      ))}
+    </div>
+  );
 }
 
 const SearchPage = () => {
   const [filters, setFilters] = useState(baseContext);
+  const [expandedTitle, setExpandedTitle] = useState(null);
 
   return (
     <FilterContext.Provider value={{ filters, setFilters }}> 
-      <NavBar
-        genres={genres}
-        instruments={instruments}
+      <NavBar genres={genres} instruments={instruments} />
+      <SearchResults 
+        filters={filters}
+        data={musicProjects}
+        expandedTitle={expandedTitle}
+        setExpandedTitle={setExpandedTitle}
       />
-      <SearchResults filters={filters} data={musicProjects}/>
     </FilterContext.Provider>
   );
 };

@@ -2,7 +2,7 @@
     background-color: #D8FCFF;
     height: 10vh;
     width: 100%;
-    z-index: 100;
+    z-index: 50;
 }
 
 .navbar-content {
@@ -13,10 +13,20 @@
     align-items: start;
     gap: .6vw;
     padding-left: 1.2vw;
-    z-index: 100;
+    z-index: 50;
 }
 
 .active-filters-container {
     display: inline;
     flex-direction: row;
+    width: 35%;
+}
+
+.clear-all-button {
+    padding: .5vh;
+    background-color: #DFF2FF;
+    border: solid 2px;
+    border-color: #BFC6E2;
+    border-radius: 2vh;
+    margin-top: .75vh;
 }

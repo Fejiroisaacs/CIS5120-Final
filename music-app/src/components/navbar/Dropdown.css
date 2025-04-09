@@ -5,7 +5,7 @@
 }
 
 .header {
-    width: 13vw;
+    width: 11vw;
     padding-left: .5vw;
     padding-right: .5vw;
     height: 3vw;
@@ -22,4 +22,8 @@
 .entries {
     margin-left: 3px;
     margin-right: 3px;
+    background-color: #DFF2FF;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    padding-bottom: .2vw
 }
