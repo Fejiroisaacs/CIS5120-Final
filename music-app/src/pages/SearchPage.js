@@ -65,7 +65,7 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
   return (
     <div className="search-results">
       {musicProjects.map((project, index) => (
-        <ProjectCard
+          <ProjectCard
           key={index}
           title={project.title}
           members={project.members}
@@ -77,6 +77,7 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
           onExpand={() => setExpandedTitle(project.title)}
           onCollapse={() => setExpandedTitle(null)}
           blurred={expandedTitle !== null && expandedTitle !== project.title}
+          audioFile={project.audioFile} // Pass the audio file path
         />
       ))}
     </div>

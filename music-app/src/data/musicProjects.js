@@ -6,7 +6,8 @@ const musicProjects = [
       instruments: ["Drums", "Guitar"],
       runtime: "1m, 27 s",
       creationDate: "July 4",
-      image: "./images/disc.png",
+      image: "./images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "MYSTIC BEATERS",
@@ -16,15 +17,17 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "./images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
-      title: "DISCO PRINCE",
+      title: "SMILE",
       members: ["Jamie Jim", "Ben Cambel"],
       genres: ["Alternative"],
       instruments: ["Bass", "Guitar"],
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "/images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "ELEVATE HER",
@@ -34,6 +37,7 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "/images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "HAMSTER WHEEL",
@@ -43,6 +47,7 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "./images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "WAKE UP MOON",
@@ -52,6 +57,7 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "/images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "ALTER EGOS",
@@ -61,6 +67,7 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "/images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
     {
       title: "RUNNING FOOS",
@@ -70,6 +77,7 @@ const musicProjects = [
       runtime: "1m, 27 s",
       creationDate: "July 4",
       image: "/images/disc-32390_1280.webp",
+      audioFile: "./audio/forca.m4a",
     },
 
   ];

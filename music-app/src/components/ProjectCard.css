@@ -112,3 +112,24 @@
   transition: filter 0.3s ease;
   pointer-events: none; /* Optional: makes sure the blurred cards can't be clicked */
 }
+
+.audio-player {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.play-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #45a049;
+}
