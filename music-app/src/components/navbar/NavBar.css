@@ -14,16 +14,19 @@
     gap: .6vw;
     padding-left: 1.2vw;
     z-index: 50;
+    justify-content: space-between;
 }
 
 .active-filters-container {
     display: inline;
     flex-direction: row;
-    width: 35%;
+    width: 45%;
 }
 
 .clear-all-button {
     padding: .5vh;
+    width: 10%;
+    text-align: center;
     background-color: #DFF2FF;
     border: solid 2px;
     border-color: #BFC6E2;
