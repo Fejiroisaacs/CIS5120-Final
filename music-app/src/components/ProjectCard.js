@@ -84,7 +84,7 @@ const ProjectCard = ({
                 </audio>
               </div>
               )}
-              <div className="audio-player">
+              {audioFile && (<div className="audio-player">
                 <button 
                 className="download-button" 
                 onClick={async (e) => {
@@ -106,7 +106,7 @@ const ProjectCard = ({
                 }}>
                 Download
               </button>
-            </div>
+            </div>)}
           </div>
         </div>
       </div>
