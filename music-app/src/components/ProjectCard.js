@@ -84,7 +84,7 @@ const ProjectCard = ({
                 </audio>
               </div>
               )}
-              {audioFile && (<div className="audio-player">
+              {isExpanded && audioFile && (<div className="audio-player">
                 <button 
                 className="download-button" 
                 onClick={async (e) => {
