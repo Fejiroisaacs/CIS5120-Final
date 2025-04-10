@@ -17,8 +17,8 @@ const Dropdown = ({ name, entries }) => {
       <div className="header" onClick={handleClick}>
         <Typography
           fontFamily={"Montserrat"}
-          fontWeight={"medium"}
-          fontSize={"1.2vw"}
+          fontWeight={600}
+          fontSize={"1.4vw"}
         >{name}</Typography>
         {opened
           ? <ExpandLessIcon htmlColor="#BFC6E2" fontSize="large" />

@@ -21,7 +21,7 @@ const CheckBox = ({ dropdown, name }) => {
   return (
     <div className="checkbox">
       <div className="content">
-        <Typography fontFamily={"Montserrat"} fontWeight={"medium"} fontSize={"1.1vw"}>{name}</Typography>
+        <Typography fontFamily={"Montserrat"} fontWeight={"medium"} fontSize={"1.4vw"}>{name}</Typography>
         <span className="boxes">
           <div
             className={`${ctxt.filters[dropdown][name] === "exclude" ? "exclude-active" : "exclude"} box`}

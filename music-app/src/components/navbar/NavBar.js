@@ -4,6 +4,7 @@ import Dropdown from "./Dropdown";
 import { Typography } from "@mui/material";
 import { baseContext, FilterContext } from "../../pages/SearchPage";
 import FilterBubble from "./FilterBubble";
+import CloseIcon from '@mui/icons-material/Close';
 
 const NavBar = ({ genres, instruments }) => {
     const ctxt = useContext(FilterContext);
@@ -36,11 +37,12 @@ const NavBar = ({ genres, instruments }) => {
             <Typography
                 fontFamily={"Montserrat, sans-serif"}
                 fontSize={"36px"}
-            >SEARCH PROJECTS</Typography>
+            >SEARCH</Typography>
             <Dropdown name="Genre" entries={genres}></Dropdown>
             <Dropdown name="Instruments" entries={instruments}></Dropdown>
             <Bubbles />
             <span className='clear-all-button'>
+              <CloseIcon />
             <Typography
                 fontFamily={"Montserrat, sans-serif"}
                 fontSize={"20px"}

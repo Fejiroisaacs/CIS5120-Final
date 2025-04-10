@@ -3,7 +3,7 @@ import "./BaseLayout.css";
 import { IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import GroupsIcon from "@mui/icons-material/Groups";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import AddIcon from "@mui/icons-material/Add";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
@@ -28,7 +28,7 @@ const BaseLayout = () => {
           </Link>
           <Link to="/chat" className="icon-link">
             <IconButton className={`icon-button ${location.pathname === '/chat' ? 'active' : ''}`}>
-              <ChatBubbleOutlineIcon />
+              <GroupsIcon />
             </IconButton>
           </Link>
           <Link to="/music" className="icon-link">
