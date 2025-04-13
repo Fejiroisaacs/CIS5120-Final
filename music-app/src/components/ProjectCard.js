@@ -15,6 +15,7 @@ const ProjectCard = ({
   audioFile
 }) => {
 
+
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
@@ -22,6 +23,34 @@ const ProjectCard = ({
     // Don't expand/collapse if clicking on audio controls
     if (e.target.closest('audio, .audio-player')) return;
     isExpanded ? onCollapse() : onExpand();
+  };
+
+  const handleAddGroup = async () => {
+    const groupData = {
+      name: title,
+      members,
+      tags,
+      audioFile
+    };
+  
+    try {
+      const response = await fetch("http://localhost:3001/api/add-group", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(groupData)
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to add group");
+      }
+  
+      console.log("✅ Group added successfully!");
+    } catch (error) {
+      console.error("❌ Error adding group:", error.message);
+    }
   };
   
   const toggleAudio = (e) => {
@@ -65,6 +94,7 @@ const ProjectCard = ({
                 <p><strong>Created on:</strong> {creationDate}</p>
               </div>
             )}
+<<<<<<< HEAD
 
             <div className="audio-section">
               {audioFile && (
@@ -108,6 +138,31 @@ const ProjectCard = ({
               </button>
             </div>)}
           </div>
+=======
+            </div>
+
+              {audioFile && (
+                <div className="audio-player" onClick={toggleAudio}>
+                  <audio
+                    ref={audioRef}
+                    controls
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                    className="audio-element"
+                  >
+                    <source src={audioFile} type="audio/m4a" />
+                    <source src={audioFile.replace('.m4a', '.mp3')} type="audio/mp3" />
+                    <source src={audioFile.replace('.m4a', '.ogg')} type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              )}
+              
+            <button className="add-group-button" onClick={handleAddGroup}>
+                Add Group
+            </button>
+>>>>>>> 522aa91 (	modified:   music-app/package-lock.json)
         </div>
       </div>
     </div>

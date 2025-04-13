@@ -1,0 +1,43 @@
+[
+  {
+    "name": "THE HARMONICS",
+    "members": [
+      "Alice",
+      "Bob",
+      "Charlie"
+    ],
+    "tags": [
+      "Jazz",
+      "Vocals",
+      "Experimental"
+    ],
+    "audioFile": "./audio/forca.mp3"
+  },
+  {
+    "name": "ECHO SOUND",
+    "members": [
+      "Dylan",
+      "Erin",
+      "Frank"
+    ],
+    "tags": [
+      "Rock",
+      "Drums",
+      "Electric"
+    ],
+    "audioFile": "./audio/forca.mp3"
+  },
+  {
+    "name": "MYSTIC BEATERS",
+    "members": [
+      "James Be",
+      "Grant Sly",
+      "Jacob John"
+    ],
+    "tags": [
+      "Country",
+      "Pop"
+    ],
+    "audioFile": "./audio/forca.m4a"
+  }
+]

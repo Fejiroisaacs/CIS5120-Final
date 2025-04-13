@@ -1,0 +1,54 @@
+.group-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef7fa;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    max-width: 90%;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .group-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .group-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .group-tag {
+    background-color: #cbe7f2;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .group-audio-player {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .members-box {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; /* center horizontally */
+}
+
+.members-list {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  word-break: break-word;
+}
