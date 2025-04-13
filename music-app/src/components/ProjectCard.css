@@ -141,26 +141,3 @@
   background-color: #a0d0e1; /* Slightly darker blue on hover */
 }
 
-<<<<<<< HEAD
-.play-button:hover {
-  background-color: #45a049;
-}
-
-.download-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.audio-section{
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-=======
->>>>>>> 522aa91 (	modified:   music-app/package-lock.json)

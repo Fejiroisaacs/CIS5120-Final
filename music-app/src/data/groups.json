@@ -39,5 +39,18 @@
       "Pop"
     ],
     "audioFile": "./audio/forca.m4a"
+  },
+  {
+    "name": "ELEVATE HER",
+    "members": [
+      "Alex Carter",
+      "Jamie Lee",
+      "Sam Fox"
+    ],
+    "tags": [
+      "Pop",
+      "Indie"
+    ],
+    "audioFile": "./audio/forca.m4a"
   }
 ]
