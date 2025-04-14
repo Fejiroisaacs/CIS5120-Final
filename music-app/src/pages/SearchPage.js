@@ -77,7 +77,7 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
           onExpand={() => setExpandedTitle(project.title)}
           onCollapse={() => setExpandedTitle(null)}
           blurred={expandedTitle !== null && expandedTitle !== project.title}
-          audioFile={project.audioFile} // Pass the audio file path
+          audioFile={project.audioFile}
         />
       ))}
     </div>

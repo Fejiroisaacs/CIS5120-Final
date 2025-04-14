@@ -18,9 +18,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;       /* Wider than tall */
+  width: 80vw;
   max-width: 1200px;
-  height: 50vh;       /* Keep the rectangle shape */
+  height: 50vh;
   z-index: 999;
   display: flex;
   flex-direction: row;
@@ -41,7 +41,7 @@
 }
 
 .text-box {
-  background-color: #ffffffd5; /* semi-transparent white */
+  background-color: #ffffffd5;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
@@ -83,7 +83,6 @@
   color: #333;
 }
 
-/* Backdrop blur */
 .card-backdrop {
   position: fixed;
   top: 0;
@@ -110,7 +109,7 @@
 .blurred {
   filter: blur(4px);
   transition: filter 0.3s ease;
-  pointer-events: none; /* Optional: makes sure the blurred cards can't be clicked */
+  pointer-events: none;
 }
 
 .audio-player {
@@ -129,8 +128,8 @@
 .add-group-button {
   padding: 0.3rem 0.6rem;
   font-size: 0.8rem;
-  background-color: #cbe7f2; /* Same light blue as tags */
-  color: #215732; /* Dark text color */
+  background-color: #cbe7f2;
+  color: #215732;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -138,6 +137,6 @@
 }
 
 .add-group-button:hover {
-  background-color: #a0d0e1; /* Slightly darker blue on hover */
+  background-color: #a0d0e1;
 }
 

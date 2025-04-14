@@ -43,7 +43,7 @@
   text-align: center;
   width: 100%;
   max-width: 400px;
-  margin: 0 auto; /* center horizontally */
+  margin: 0 auto;
 }
 
 .members-list {

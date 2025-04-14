@@ -54,7 +54,7 @@ const ProjectCard = ({
   };
   
   const toggleAudio = (e) => {
-    e.stopPropagation(); // Prevent card click handler from firing
+    e.stopPropagation();
     if (isPlaying) {
       audioRef.current.pause();
     } else {
