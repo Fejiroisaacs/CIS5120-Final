@@ -12,9 +12,9 @@ const GroupsPage = () => {
         {groups.map((group, index) => (
           <GroupCard 
             key={index}
-            name={group.name}
+            name={group.title}
             members={group.members}
-            tags={group.tags}
+            genres={group.genres}
             audioFile={group.audioFile}
           />
         ))}

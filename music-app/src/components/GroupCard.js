@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./GroupCard.css";
 
-const GroupCard = ({ name, members, tags, audioFile }) => {
+const GroupCard = ({ name, members, genres, audioFile }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
@@ -21,7 +21,7 @@ const GroupCard = ({ name, members, tags, audioFile }) => {
             <h2>{name}</h2>
             <div className="group-meta">
             <div className="meta-section tags">
-                {tags.map((tag, idx) => (
+                {genres.map((tag, idx) => (
                 <span key={idx} className="group-tag">{tag}</span>
                 ))}
             </div>

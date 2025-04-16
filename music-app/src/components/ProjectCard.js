@@ -4,7 +4,8 @@ import "./ProjectCard.css";
 const ProjectCard = ({
   title,
   members,
-  tags,
+  genres,
+  instruments,
   image,
   runtime,
   creationDate,
@@ -27,9 +28,13 @@ const ProjectCard = ({
 
   const handleAddGroup = async () => {
     const groupData = {
-      name: title,
+      title,
       members,
-      tags,
+      genres,
+      instruments,
+      image,
+      runtime,
+      creationDate,
       audioFile
     };
   
@@ -84,7 +89,7 @@ const ProjectCard = ({
               ))}
             </ul>
             <div className="tags">
-              {tags.map((tag, index) => (
+              {genres.map((tag, index) => (
                 <span className="tag" key={index}>{tag}</span>
               ))}
             </div>
@@ -114,9 +119,9 @@ const ProjectCard = ({
                 </div>
               )}
               
-            <button className="add-group-button" onClick={handleAddGroup}>
+            {isExpanded && <button className="add-group-button" onClick={handleAddGroup}>
                 Add Group
-            </button>
+            </button>}
         </div>
       </div>
   </>

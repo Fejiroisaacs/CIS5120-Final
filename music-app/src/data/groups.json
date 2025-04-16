@@ -1,12 +1,12 @@
 [
   {
-    "name": "THE HARMONICS",
+    "title": "THE HARMONICS",
     "members": [
       "Alice",
       "Bob",
       "Charlie"
     ],
-    "tags": [
+    "genres": [
       "Jazz",
       "Vocals",
       "Experimental"
@@ -14,43 +14,17 @@
     "audioFile": "./audio/forca.mp3"
   },
   {
-    "name": "ECHO SOUND",
+    "title": "ECHO SOUND",
     "members": [
       "Dylan",
       "Erin",
       "Frank"
     ],
-    "tags": [
+    "genres": [
       "Rock",
       "Drums",
       "Electric"
     ],
     "audioFile": "./audio/forca.mp3"
-  },
-  {
-    "name": "MYSTIC BEATERS",
-    "members": [
-      "James Be",
-      "Grant Sly",
-      "Jacob John"
-    ],
-    "tags": [
-      "Country",
-      "Pop"
-    ],
-    "audioFile": "./audio/forca.m4a"
-  },
-  {
-    "name": "ELEVATE HER",
-    "members": [
-      "Alex Carter",
-      "Jamie Lee",
-      "Sam Fox"
-    ],
-    "tags": [
-      "Pop",
-      "Indie"
-    ],
-    "audioFile": "./audio/forca.m4a"
   }
 ]

@@ -1,0 +1,84 @@
+[
+
+   {
+      "title": "DISCO PRINCE",
+      "members": ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"],
+      "genres": ["Pop", "Indie"],
+      "instruments": ["Drums", "Guitar"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "./images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "MYSTIC BEATERS",
+      "members": ["James Be", "Grant Sly", "Jacob John"],
+      "genres": ["Country", "Pop"],
+      "instruments": ["Vocals", "Piano"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "./images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "SMILE",
+      "members": ["Jamie Jim", "Ben Cambel"],
+      "genres": ["Alternative"],
+      "instruments": ["Bass", "Guitar"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "/images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "ELEVATE HER",
+      "members": ["Alex Carter", "Jamie Lee", "Sam Fox"],
+      "genres": ["Pop", "Indie"],
+      "instruments": ["Vocals", "Drums", "Guitar"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "/images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "HAMSTER WHEEL",
+      "members": ["Riley James", "Morgan Bell"],
+      "genres": ["Alternative"],
+      "instruments": ["Piano", "Bass"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "./images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "WAKE UP MOON",
+      "members": ["Jessie Taylor", "Chris Lane"],
+      "genres": ["Alternative"],
+      "instruments": ["Piano", "Bass", "Drums"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "/images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "ALTER EGOS",
+      "members": ["Justin Sung", "Carmen Toledo"],
+      "genres": ["Indie"],
+      "instruments": ["Vocals"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "/images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    },
+    {
+      "title": "RUNNING FOOS",
+      "members": ["Casey Walker", "Blake Rivers"],
+      "genres": ["Rock"],
+      "instruments": ["Drums"],
+      "runtime": "1m, 27 s",
+      "creationDate": "July 4",
+      "image": "/images/disc-32390_1280.webp",
+      "audioFile": "./audio/forca.m4a"
+    }
+
+  ]
