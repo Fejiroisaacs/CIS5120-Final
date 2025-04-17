@@ -1,0 +1,30 @@
+[
+  {
+    "title": "THE HARMONICS",
+    "members": [
+      "Alice",
+      "Bob",
+      "Charlie"
+    ],
+    "genres": [
+      "Jazz",
+      "Vocals",
+      "Experimental"
+    ],
+    "audioFile": "./audio/forca.mp3"
+  },
+  {
+    "title": "ECHO SOUND",
+    "members": [
+      "Dylan",
+      "Erin",
+      "Frank"
+    ],
+    "genres": [
+      "Rock",
+      "Drums",
+      "Electric"
+    ],
+    "audioFile": "./audio/forca.mp3"
+  }
+]

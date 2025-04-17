@@ -6,7 +6,7 @@ import CreatePage from './pages/CreatePage';
 import AccountPage from './pages/AccountPage';
 import SearchPage from './pages/SearchPage';
 import MusicPage from './pages/MusicPage';
-import ChatPage from './pages/ChatPage';
+import GroupsPage from './pages/GroupsPage';
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
           <Route path="create" element={<CreatePage />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="account" element={<AccountPage />} />
-          <Route path="chat" element={<ChatPage />} />
+          <Route path="groups" element={<GroupsPage />} />
           <Route path="music" element={<MusicPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />

@@ -26,8 +26,8 @@ const BaseLayout = () => {
               <SearchIcon />
             </IconButton>
           </Link>
-          <Link to="/chat" className="icon-link">
-            <IconButton className={`icon-button ${location.pathname === '/chat' ? 'active' : ''}`}>
+          <Link to="/groups" className="icon-link">
+            <IconButton className={`icon-button ${location.pathname === '/groups' ? 'active' : ''}`}>
               <GroupsIcon />
             </IconButton>
           </Link>

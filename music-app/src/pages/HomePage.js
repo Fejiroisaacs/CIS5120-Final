@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProjectCard from "../components/ProjectCard";
 import PageHeader from "../components/navbar/PageHeader.js";
-import myProjects from "../data/myProjects.js";
+import myProjects from "../data/myProjects.json";
 import "../components/Style.css";
 
 
@@ -17,7 +17,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
           key={index}
           title={project.title}
           members={project.members}
-          tags={project.genres}
+          genres={project.genres}
           image={project.image}
           runtime={project.runtime}
           creationDate={project.creationDate}
