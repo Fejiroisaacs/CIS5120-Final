@@ -23,6 +23,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
           creationDate={project.creationDate}
           audioFile={project.audioFile}
           isExpanded={expandedTitle === project.title}
+          search={false}
           onExpand={() => setExpandedTitle(project.title)}
           onCollapse={() => setExpandedTitle(null)}
           blurred={expandedTitle !== null && expandedTitle !== project.title}

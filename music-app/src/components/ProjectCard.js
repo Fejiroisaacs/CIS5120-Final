@@ -13,7 +13,8 @@ const ProjectCard = ({
   onExpand,
   onCollapse,
   blurred,
-  audioFile
+  audioFile,
+  search
 }) => {
 
 
@@ -167,12 +168,16 @@ const ProjectCard = ({
                     Your browser does not support the audio element.
                   </audio>
                 </div>
-                <button className="card-button" onClick={handleAddProject}>
-                  Add Project
-                </button>
-                <button className="card-button" onClick={handleApplyToGroup}>
-                  Apply to Group
-                </button>
+                {search && (
+                  <div className="card-actions">
+                    <button className="card-button" onClick={handleAddProject}>
+                      Add Project
+                    </button>
+                    <button className="card-button" onClick={handleApplyToGroup}>
+                      Apply to Group
+                    </button>
+                  </div>
+                )}
               </div>
             )}
         </div>

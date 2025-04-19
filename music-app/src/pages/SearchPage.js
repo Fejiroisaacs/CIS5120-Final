@@ -78,6 +78,7 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
           onExpand={() => setExpandedTitle(project.title)}
           onCollapse={() => setExpandedTitle(null)}
           blurred={expandedTitle !== null && expandedTitle !== project.title}
+          search={true}
           audioFile={project.audioFile}
         />
       ))}
