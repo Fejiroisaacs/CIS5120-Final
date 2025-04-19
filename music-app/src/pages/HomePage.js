@@ -21,6 +21,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
           image={project.image}
           runtime={project.runtime}
           creationDate={project.creationDate}
+          audioFile={project.audioFile}
           isExpanded={expandedTitle === project.title}
           onExpand={() => setExpandedTitle(project.title)}
           onCollapse={() => setExpandedTitle(null)}

@@ -125,9 +125,15 @@
   margin-top: 0.5rem;
 }
 
-.add-group-button {
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
   background-color: #cbe7f2;
   color: #215732;
   border: none;
@@ -136,7 +142,7 @@
   transition: background-color 0.2s ease;
 }
 
-.add-group-button:hover {
+.card-button:hover {
   background-color: #a0d0e1;
 }
 

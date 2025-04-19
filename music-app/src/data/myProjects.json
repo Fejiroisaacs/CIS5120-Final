@@ -1,37 +1,52 @@
 [
   {
-    "title": "AUTOBAHN",
+    "title": "THE HARMONICS",
     "members": [
-      "You"
+      "Alice",
+      "Bob",
+      "Charlie"
     ],
     "genres": [
-      "Electronica"
-    ],
-    "instruments": [
-      "Synth",
-      "Drums"
-    ],
-    "runtime": "1m, 27 s",
-    "creationDate": "July 4",
-    "image": "./images/disc.png",
-    "audioFile": "./audio/forca.m4a"
-  },
-  {
-    "title": "KIND OF GREEN",
-    "members": [
-      "You",
-      "Yards David"
-    ],
-    "genres": [
-      "Jazz"
-    ],
-    "instruments": [
-      "Drums",
-      "Trumpet"
+      "Jazz",
+      "Vocals",
+      "Experimental"
     ],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "./images/disc-32390_1280.webp",
+    "audioFile": "./audio/forca.mp3"
+  },
+  {
+    "title": "ECHO SOUND",
+    "members": [
+      "Dylan",
+      "Erin",
+      "Frank"
+    ],
+    "genres": [
+      "Rock",
+      "Drums",
+      "Electric"
+    ],
+    "runtime": "1m, 27 s",
+    "creationDate": "July 4",
+    "image": "./images/disc-32390_1280.webp",
+    "audioFile": "./audio/forca.mp3"
+  },
+  {
+    "title": "DISCO PRINCE",
+    "members": [
+      "Jake Murphy",
+      "Fejiro Anigboro",
+      "Solomon Graf"
+    ],
+    "genres": [
+      "Pop",
+      "Indie"
+    ],
+    "image": "./images/disc-32390_1280.webp",
+    "runtime": "1m, 27 s",
+    "creationDate": "July 4",
     "audioFile": "./audio/forca.m4a"
   },
   {

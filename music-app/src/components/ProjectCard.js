@@ -26,7 +26,39 @@ const ProjectCard = ({
     isExpanded ? onCollapse() : onExpand();
   };
 
-  const handleAddGroup = async () => {
+  const handleAddProject = async () => {
+    const projectData = {
+      title,
+      members,
+      genres,
+      instruments,
+      image,
+      runtime,
+      creationDate,
+      audioFile
+    };
+  
+    try {
+      const response = await fetch("http://localhost:3001/api/add-project", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(projectData)
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to add project");
+      }
+  
+      console.log("Project added successfully!");
+    } catch (error) {
+      console.error("Error adding project:", error.message);
+    }
+  };
+  
+  const handleApplyToGroup = async () => {
     const groupData = {
       title,
       members,
@@ -49,12 +81,12 @@ const ProjectCard = ({
   
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to add group");
+        throw new Error(errorData.error || "Failed to apply to group");
       }
   
-      console.log("✅ Group added successfully!");
+      console.log("Applied to group successfully!");
     } catch (error) {
-      console.error("❌ Error adding group:", error.message);
+      console.error("Error applying to group:", error.message);
     }
   };
   
@@ -100,8 +132,7 @@ const ProjectCard = ({
               </div>
             )}
             </div>
-
-              {audioFile && (
+            {!isExpanded && audioFile && (
                 <div className="audio-player" onClick={toggleAudio}>
                   <audio
                     ref={audioRef}
@@ -119,9 +150,31 @@ const ProjectCard = ({
                 </div>
               )}
               
-            {isExpanded && <button className="add-group-button" onClick={handleAddGroup}>
-                Add Group
-            </button>}
+            {isExpanded && (
+              <div className="card-actions">
+                <div className="audio-player" onClick={toggleAudio}>
+                  <audio
+                    ref={audioRef}
+                    controls
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                    className="audio-element"
+                  >
+                    <source src={audioFile} type="audio/m4a" />
+                    <source src={audioFile.replace('.m4a', '.mp3')} type="audio/mp3" />
+                    <source src={audioFile.replace('.m4a', '.ogg')} type="audio/ogg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <button className="card-button" onClick={handleAddProject}>
+                  Add Project
+                </button>
+                <button className="card-button" onClick={handleApplyToGroup}>
+                  Apply to Group
+                </button>
+              </div>
+            )}
         </div>
       </div>
   </>
