@@ -10,7 +10,6 @@ const CreatePage = () => {
   const [projectData, setProjectData] = useState({
     title: "",
     members: "",
-    tags: "",
     image: null,
     audio: null,
     audioRuntime: null, // New state for runtime
@@ -23,6 +22,7 @@ const CreatePage = () => {
       ...prevData,
       [e.target.name]: e.target.value
     }));
+    console.log(projectData);
   };
 
   const handleCheckboxChange = (e, category) => {
@@ -63,7 +63,8 @@ const CreatePage = () => {
     const formData = new FormData();
     formData.append("title", projectData.title);
     formData.append("members", projectData.members);
-    formData.append("tags", projectData.tags);
+    formData.append("genres", projectData.genres);
+    formData.append("instruments", projectData.genres);
     formData.append("image", projectData.image);
     formData.append("audio", projectData.audio);
     formData.append("audioRuntime", projectData.audioRuntime);
@@ -71,7 +72,10 @@ const CreatePage = () => {
     formData.append("selectedInstruments", JSON.stringify(projectData.selectedInstruments));
 
     try {
-      const response = await fetch("http://localhost:5000/upload", {
+        for (let pair of formData.entries()) {
+          console.log(pair[0] + ": ", pair[1]);
+        }
+        const response = await fetch("http://localhost:3001/api/upload", {
         method: "POST",
         body: formData
       });

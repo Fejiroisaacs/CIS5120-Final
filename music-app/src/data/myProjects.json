@@ -50,19 +50,21 @@
     "audioFile": "./audio/forca.m4a"
   },
   {
-    "title": "DISCO PRINCE",
+    "title": "Project 1",
     "members": [
-      "Jake Murphy",
-      "Fejiro Anigboro",
-      "Solomon Graf"
+      "Me",
+      "You"
     ],
+    "runtime": "6m, 32s",
     "genres": [
-      "Pop",
-      "Indie"
+      "Rock",
+      "Pop"
     ],
-    "image": "./images/disc-32390_1280.webp",
-    "runtime": "1m, 27 s",
-    "creationDate": "July 4",
-    "audioFile": "./audio/forca.m4a"
+    "instruments": [
+      "Vocals",
+      "Guitar"
+    ],
+    "image": "uploads/1745109470348-MV5BZjBlNTYzNzAtNjkzYS00Yzk0LThiMWUtYjQ2ZDI1MzJhYzgxXkEyXkFqcGc@._V1_.jpg",
+    "audioFile": "uploads/1745109470354-Bolivia.wav"
   }
 ]
