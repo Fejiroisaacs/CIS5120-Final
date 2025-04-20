@@ -1,70 +1,31 @@
-import React, { createContext, useState } from 'react';
-import "../components/Style.css";
+import React, { useState } from 'react';
+import "./PageStyle.css";
 import ProjectCard from "../components/ProjectCard";
 import musicProjects from "../data/musicProjects.json";
-import NavBar from '../components/navbar/NavBar';
 
-const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
-const instruments = ["Vocals", "Guitar", "Piano", "Bass", "Drums"];
+const genres = ["Rock", "Pop", "Country", "Indie", "Alternative", "R&B", "Electronica"];
 
-export const baseContext = {
-  "Genre": genres.reduce((acc, genre) => {
-    acc[genre] = "off";
-    return acc;
-  }, {}),
-  "Instruments": instruments.reduce((acc, instrument) => {
-    acc[instrument] = "off";
-    return acc;
-  }, {})
-};
+const GenreFolder = ({genre}) => {
+  return (
+    <div className="genre">
+      {genre}
+    </div>
+  )
+}
 
-export const FilterContext = createContext();
+const GenreSelect = ({genres}) => {
+  return (
+    <div className="genres">
+      {genres.map((g) => <GenreFolder genre={g} />)}
+    </div>
+  )
+}
 
-const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
-
-  const filterSongs = (songs, filters) => {
-    return songs.filter(song => {
-      // Check Genre filters (note the capitalization)
-      const genreMatch = checkCategory(song.genres, filters.Genre);
-      if (!genreMatch) return false;
-  
-      // Check Instruments filters (note the capitalization and plural vs singular)
-      const instrumentMatch = checkCategory(song.instruments, filters.Instruments);
-      if (!instrumentMatch) return false;
-  
-      return true;
-    });
-  };
-  
-  const checkCategory = (songItems, filterItems) => {
-    const included = [];
-    const excluded = [];
-  
-    // Process filter items
-    for (const [name, status] of Object.entries(filterItems)) {
-      if (status === "include") included.push(name);
-      if (status === "exclude") excluded.push(name);
-    }
-  
-    // Reject if song contains any excluded items
-    if (excluded.some(item => songItems.includes(item))) {
-      return false;
-    }
-  
-    // If includes exist, song must have at least one
-    if (included.length > 0 && !included.some(item => songItems.includes(item))) {
-      return false;
-    }
-  
-    return true;
-  };
-  
-  // Usage:
-  const musicProjects = filterSongs(data, filters);
-
+const SearchResults = ({genre, data}) => {
   return (
     <div className="search-results">
       {musicProjects.map((project, index) => (
+        <div className="result">
           <ProjectCard
           key={index}
           title={project.title}
@@ -74,32 +35,22 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
           image={project.image}
           runtime={project.runtime}
           creationDate={project.creationDate}
-          isExpanded={expandedTitle === project.title}
-          onExpand={() => setExpandedTitle(project.title)}
-          onCollapse={() => setExpandedTitle(null)}
-          blurred={expandedTitle !== null && expandedTitle !== project.title}
           search={true}
           audioFile={project.audioFile}
-        />
+        /></div>
       ))}
     </div>
   );
 }
 
 const SearchPage = () => {
-  const [filters, setFilters] = useState(baseContext);
-  const [expandedTitle, setExpandedTitle] = useState(null);
+  const [genre, setGenre] = useState(null)
 
   return (
-    <FilterContext.Provider value={{ filters, setFilters }}> 
-      <NavBar genres={genres} instruments={instruments} />
-      <SearchResults 
-        filters={filters}
+      <>{genre !== null ? <SearchResults 
+        genre={genre}
         data={musicProjects}
-        expandedTitle={expandedTitle}
-        setExpandedTitle={setExpandedTitle}
-      />
-    </FilterContext.Provider>
+      /> : <GenreSelect genres={genres}/>}</>
   );
 };
 

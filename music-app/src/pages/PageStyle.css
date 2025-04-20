@@ -1,0 +1,37 @@
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    column-gap: 1.5rem;
+    padding: 2rem;
+    background-color: #d5ffe9;
+}
+
+.result {
+    align-items: center;
+    margin-bottom: -40%; /* Negative margin creates overlap */
+    position: relative; /* Needed for z-index */
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+/* Bring element to front on hover */
+.result:hover {
+    transform: translateY(-0.5rem) !important;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.genres {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+}
+
+.genre {
+    background-color: #d5ffe9;
+    width: 90%;
+    padding: 5%;
+    font-size: 2rem;
+    font-weight: 200;
+    border-top-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+}
