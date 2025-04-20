@@ -1,5 +1,5 @@
 import React from 'react';
-import PageHeader from "../components/navbar/PageHeader.js";
+import PageHeader from "../components/PageHeader.js";
 import "../components/Style.css";
 import GroupCard from "../components/GroupCard";
 import groups from "../data/groups.json";

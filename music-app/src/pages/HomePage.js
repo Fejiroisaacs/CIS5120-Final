@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from "../components/ProjectCard";
-import PageHeader from "../components/navbar/PageHeader.js";
+import PageHeader from "../components/PageHeader.js";
 import myProjects from "../data/myProjects.json";
 import "../components/Style.css";
 

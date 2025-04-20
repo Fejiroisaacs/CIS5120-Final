@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PageHeader from "../components/navbar/PageHeader.js";
+import PageHeader from "../components/PageHeader.js";
 import "../components/Style.css";
 import "../components/create.css";  
 
