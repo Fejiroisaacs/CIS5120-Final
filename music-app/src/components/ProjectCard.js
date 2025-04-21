@@ -109,6 +109,12 @@ const ProjectCard = ({
       <div className="content">
         <div className="title">{title}</div>
         <div className="member-list">{members.join(', ')}</div>
+        {isExpanded && (
+          <div className="member-list">{"Genres: " + genres.join(', ')}</div>
+        )}
+        {isExpanded && instruments && (
+          <div className="member-list">{"Instruments: " + instruments.join(', ')}</div>
+        )}
         <img src={image} alt={`${title} cover`} className={`album-image ${isExpanded ? "expanded" : ""}`} />
         <div className="horiz">
           <div>

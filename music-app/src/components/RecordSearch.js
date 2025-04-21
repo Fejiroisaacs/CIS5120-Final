@@ -6,9 +6,15 @@ import { useState } from "react";
 
 export const SearchResults = ({ genre, setGenre, data }) => {
   const [expandedTitle, setExpandedTitle] = useState(null);
+  
+  const filteredData = data.filter((d) => (d.genres.includes(genre)));
 
   return (
-    <>
+    <div onClick={(e) => {
+      if (expandedTitle !== null && !e.target.closest('audio, .audio-player, .card-button')) {
+        setExpandedTitle(null);
+      }
+    }}>
       <div className="search-header">
         <div className="folder-tab">
           {genre}
@@ -22,14 +28,14 @@ export const SearchResults = ({ genre, setGenre, data }) => {
         </span>
       </div>
       <div className="search-results">
-        {data.map((project, index) => (
+        {filteredData.map((project, index) => (
           <div key={index} className={`result ${expandedTitle === project.title ? "expand" : ""} ${expandedTitle !== null ? "noHover" : "regular"}`}>
             <ProjectCard
               key={index}
               title={project.title}
               members={project.members}
               genres={project.genres}
-              instrumens={project.instruments}
+              instruments={project.instruments}
               image={project.image}
               runtime={project.runtime}
               creationDate={project.creationDate}
@@ -42,6 +48,6 @@ export const SearchResults = ({ genre, setGenre, data }) => {
             /></div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
