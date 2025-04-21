@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./ProjectCard.css";
+import { Typography } from "@mui/material";
 
 const ProjectCard = ({
   title,
@@ -23,7 +24,7 @@ const ProjectCard = ({
 
   const handleCardClick = (e) => {
     // Don't expand/collapse if clicking on audio controls
-    if (e.target.closest('audio, .audio-player')) return;
+    if (e.target.closest('audio, .audio-player, .card-button')) return;
     isExpanded ? onCollapse() : onExpand();
   };
 
@@ -102,15 +103,60 @@ const ProjectCard = ({
     }
     setIsPlaying(!isPlaying);
   };
-  
+
   return (
-    <div className={`music-card ${blurred ? "blurred" : ""}`} onClick={handleCardClick}>
+    <div className={`music-card ${blurred ? "blurred" : ""} ${isExpanded ? "expanded" : ""}`} onClick={handleCardClick}>
       <div className="content">
         <div className="title">{title}</div>
         <div className="member-list">{members.join(', ')}</div>
-        <img src={image} alt={`${title} cover`} className="album-image" />
+        <img src={image} alt={`${title} cover`} className={`album-image ${isExpanded ? "expanded" : ""}`} />
+        <div className="horiz">
+          <div>
+            {isExpanded && (
+              <div className="extra-info">
+                <p><strong>Runtime:</strong> {runtime}</p>
+                <p><strong>Created on:</strong> {creationDate}</p>
+              </div>
+            )}
+            {isExpanded && audioFile && (
+              <div className="audio-player" onClick={toggleAudio}>
+                <audio
+                  ref={audioRef}
+                  controls
+                  onPlay={() => setIsPlaying(true)}
+                  onPause={() => setIsPlaying(false)}
+                  onEnded={() => setIsPlaying(false)}
+                  className="audio-element"
+                >
+                  <source src={audioFile} type="audio/m4a" />
+                  <source src={audioFile.replace('.m4a', '.mp3')} type="audio/mp3" />
+                  <source src={audioFile.replace('.m4a', '.ogg')} type="audio/ogg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            )}
+          </div>
+          <div>
+            {isExpanded &&
+              search && (
+                <div className="card-actions">
+                  <span className="card-button" onClick={handleAddProject}>
+                    <Typography
+                      fontFamily={"Montserrat, sans-serif"}
+                      fontSize={"20px"}
+                    >Add Project</Typography>
+                  </span>
+                  <span className="card-button" onClick={handleApplyToGroup}>
+                    <Typography
+                      fontFamily={"Montserrat, sans-serif"}
+                      fontSize={"20px"}
+                    >Apply to Group</Typography>
+                  </span>
+                </div>
+              )}
+          </div>
         </div>
-
+      </div>
     </div>
   );
 };

@@ -23,7 +23,7 @@ export const SearchResults = ({ genre, setGenre, data }) => {
       </div>
       <div className="search-results">
         {data.map((project, index) => (
-          <div key={index} className={`result ${expandedTitle !== null ? "expand" : ""}`}>
+          <div key={index} className={`result ${expandedTitle === project.title ? "expand" : ""} ${expandedTitle !== null ? "noHover" : "regular"}`}>
             <ProjectCard
               key={index}
               title={project.title}

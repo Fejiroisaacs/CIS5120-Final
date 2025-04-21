@@ -17,10 +17,17 @@
     z-index: 1;
 }
 
+.expand {
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Bring element to front on hover */
-.result:hover {
-    transform: translateY(-0.5rem) !important;
-    z-index: 10;
+.result.regular:hover {
+    transform: translateY(-2rem) !important;
 }
 
 .folder-tab {

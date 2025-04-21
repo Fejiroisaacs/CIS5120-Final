@@ -17,6 +17,12 @@
   padding: .5%;
 }
 
+.album-image.expanded {
+  width: 70%;
+  aspect-ratio: 1/1;
+  padding: .5%;
+}
+
 .member-list {
   font-size: 1rem;
   color: #333;
@@ -33,5 +39,59 @@
 }
 
 .blurred {
-  filter: blur(3px)
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+.music-card.expanded {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  height: 80%;
+}
+
+.button {
+  padding: 1%;
+}
+
+.extra-info {
+  display: flex;
+  gap: 5px;
+}
+
+.horiz {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-button {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin: 1.5%;
+  text-align: center;
+  background-color: #d5ffe9;
+  color: #215732;
+  border: solid 2px;
+  border-color: #80cba4;
+  border-radius: 2vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.card-button:hover {
+  background-color: #a0e1b6;
 }
