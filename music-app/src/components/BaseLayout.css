@@ -58,4 +58,5 @@
     max-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 100%;
 }
