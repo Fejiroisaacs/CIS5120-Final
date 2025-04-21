@@ -102,6 +102,7 @@ const ProjectCard = ({
     }
     setIsPlaying(!isPlaying);
   };
+  
   return (
     <div className="music-card">
       <div className="content">

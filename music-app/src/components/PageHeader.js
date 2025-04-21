@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar/NavBar.css";
+import "./NavBar.css";
 import { Typography } from "@mui/material";
 
 const PageHeader = ({ title }) => {

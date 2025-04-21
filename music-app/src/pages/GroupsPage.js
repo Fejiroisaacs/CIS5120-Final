@@ -1,6 +1,5 @@
 import React from 'react';
 import PageHeader from "../components/PageHeader.js";
-import "./PageStyle.css";
 import GroupCard from "../components/GroupCard";
 import groups from "../data/groups.json";
 

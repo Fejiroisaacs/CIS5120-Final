@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ProjectCard from "../components/ProjectCard";
 import PageHeader from "../components/PageHeader.js";
 import myProjects from "../data/myProjects.json";
-import "./PageStyle.css";
 
 const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
   return (

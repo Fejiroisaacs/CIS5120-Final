@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader.js";
-import "./PageStyle.css";
 import "../components/create.css";  
 
 const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
