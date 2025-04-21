@@ -1,6 +1,6 @@
 .genres {
     display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, minmax(33%, 1fr));
     background-color: #d5ffe9;
     height: 60%;
     row-gap: 20%

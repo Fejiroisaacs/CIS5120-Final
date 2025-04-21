@@ -17,7 +17,7 @@ export const GenreSelect = ({genres, setGenre}) => {
       <div className="genre-search">
         <div className="genre-header">Search for Records</div>
         <div className="genres">
-        {genres.map((g) => <GenreFolder genre={g} setGenre={setGenre}/>)}
+        {genres.map((g) => <GenreFolder key={g} genre={g} setGenre={setGenre}/>)}
       </div>
       </div>
     )

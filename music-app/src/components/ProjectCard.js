@@ -104,7 +104,7 @@ const ProjectCard = ({
   };
   
   return (
-    <div className="music-card">
+    <div className={`music-card ${blurred ? "blurred" : ""}`} onClick={handleCardClick}>
       <div className="content">
         <div className="title">{title}</div>
         <div className="member-list">{members.join(', ')}</div>

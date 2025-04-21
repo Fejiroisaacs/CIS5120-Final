@@ -31,3 +31,7 @@
   word-break: break-word;
   padding: .5%;
 }
+
+.blurred {
+  filter: blur(3px)
+}

@@ -53,9 +53,7 @@ const BaseLayout = () => {
       </div>
 
       <div className="main-content">
-        <div className="page-content">
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
     </div>
   );

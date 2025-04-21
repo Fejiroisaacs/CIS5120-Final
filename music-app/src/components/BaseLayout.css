@@ -51,9 +51,6 @@
 .main-content {
     flex: 1;
     background-color: white;
-}
-
-.page-content {
     max-width: 96vw;
     max-height: 100vh;
     overflow-y: scroll;

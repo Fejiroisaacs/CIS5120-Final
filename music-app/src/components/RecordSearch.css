@@ -1,9 +1,10 @@
 .search-results {
     display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, minmax(33%, 1fr));
     column-gap: 1.5rem;
     padding: 2rem;
     background-color: #d5ffe9;
+    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -20,7 +21,6 @@
 .result:hover {
     transform: translateY(-0.5rem) !important;
     z-index: 10;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .folder-tab {
