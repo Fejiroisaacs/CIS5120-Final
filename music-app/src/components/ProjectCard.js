@@ -3,6 +3,8 @@ import "./ProjectCard.css";
 
 const ProjectCard = ({
   title,
+  projectId,
+  groupId,
   groupMembers,
   groupName,
   genres,
@@ -31,7 +33,8 @@ const ProjectCard = ({
   const handleAddProject = async () => {
     const projectData = {
       title,
-      groupMembers,
+      projectId,
+      groupId,
       genres,
       instruments,
       image,
@@ -63,7 +66,8 @@ const ProjectCard = ({
   const handleApplyToGroup = async () => {
     const groupData = {
       title,
-      groupMembers,
+      projectId,
+      groupId,
       genres,
       instruments,
       image,

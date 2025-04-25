@@ -72,6 +72,8 @@ const SearchResults = ({ filters, data, expandedTitle, setExpandedTitle }) => {
           <ProjectCard
             key={index}
             title={project.title}
+            projectId={project.projectId}
+            groupId={project.groupId}
             members={project.members}
             genres={project.genres}
             instruments={project.instruments}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ProjectCard from "../components/ProjectCard";
 import PageHeader from "../components/PageHeader.js";
 import myProjects from "../data/myProjects.json";
+import groups from "../data/groups.json";
 import "../components/Style.css";
 
 
@@ -12,23 +13,32 @@ import "../components/Style.css";
 const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
   return (
     <div className="search-results">
-      {data.map((project, index) => (
-        <ProjectCard
-          key={index}
-          title={project.title}
-          groupMembers={project.members}
-          genres={project.genres}
-          image={project.image}
-          runtime={project.runtime}
-          creationDate={project.creationDate}
-          audioFile={project.audioFile}
-          isExpanded={expandedTitle === project.title}
-          search={false}
-          onExpand={() => setExpandedTitle(project.title)}
-          onCollapse={() => setExpandedTitle(null)}
-          blurred={expandedTitle !== null && expandedTitle !== project.title}
-        />
-      ))}
+      {myProjects.map((project, index) => {
+        const group = groups.find(g => g.groupId === project.groupId);
+
+        return (
+          <ProjectCard
+            key={index}
+            title={project.title}
+            projectId={project.projectId}
+            groupId={project.groupId}
+            members={project.members}
+            genres={project.genres}
+            instruments={project.instruments}
+            image={project.image}
+            runtime={project.runtime}
+            creationDate={project.creationDate}
+            isExpanded={expandedTitle === project.title}
+            onExpand={() => setExpandedTitle(project.title)}
+            onCollapse={() => setExpandedTitle(null)}
+            blurred={expandedTitle !== null && expandedTitle !== project.title}
+            search={true}
+            audioFile={project.audioFile}
+            groupName={group?.name || "Unknown Group"}
+            groupMembers={group?.members || []}
+          />
+        );
+      })}
     </div>
   );
 };

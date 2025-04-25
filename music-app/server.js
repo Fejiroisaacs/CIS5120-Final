@@ -52,8 +52,10 @@ app.post('/api/add-group', (req, res) => {
 
 app.post('/api/add-project', (req, res) => {
   const newProject = req.body;
+  console.log(newProject);
 
-  if (!newProject.title || !newProject.members || !newProject.genres || !newProject.audioFile || !newProject.projectId) {
+
+  if (!newProject.title || !newProject.genres || !newProject.audioFile || !newProject.projectId) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 
@@ -80,7 +82,7 @@ app.post('/api/upload', upload.fields([
   const audioFile = req.files['audio']?.[0];
   const imageFile = req.files['image']?.[0];
 
-  if (!title || !members || !selectedGenres ||  !selectedInstruments || !audioFile) {
+  if (!title || !selectedGenres ||  !selectedInstruments || !audioFile) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 
