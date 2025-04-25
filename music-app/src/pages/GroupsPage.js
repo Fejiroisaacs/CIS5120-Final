@@ -10,7 +10,7 @@ const GroupsPage = () => {
       <PageHeader title="MY GROUPS" />
       <div className="group-list">
         {groups.map((group, index) => (
-          <GroupCard 
+          <GroupCard
             key={index}
             name={group.title}
             members={group.members}

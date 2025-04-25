@@ -48,23 +48,5 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "audioFile": "./audio/forca.m4a"
-  },
-  {
-    "title": "Project 1",
-    "members": [
-      "Me",
-      "You"
-    ],
-    "runtime": "6m, 32s",
-    "genres": [
-      "Rock",
-      "Pop"
-    ],
-    "instruments": [
-      "Vocals",
-      "Guitar"
-    ],
-    "image": "uploads/1745109470348-MV5BZjBlNTYzNzAtNjkzYS00Yzk0LThiMWUtYjQ2ZDI1MzJhYzgxXkEyXkFqcGc@._V1_.jpg",
-    "audioFile": "uploads/1745109470354-Bolivia.wav"
   }
 ]
