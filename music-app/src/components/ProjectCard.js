@@ -3,7 +3,8 @@ import "./ProjectCard.css";
 
 const ProjectCard = ({
   title,
-  members,
+  groupMembers,
+  groupName,
   genres,
   instruments,
   image,
@@ -30,7 +31,7 @@ const ProjectCard = ({
   const handleAddProject = async () => {
     const projectData = {
       title,
-      members,
+      groupMembers,
       genres,
       instruments,
       image,
@@ -62,7 +63,7 @@ const ProjectCard = ({
   const handleApplyToGroup = async () => {
     const groupData = {
       title,
-      members,
+      groupMembers,
       genres,
       instruments,
       image,
@@ -114,10 +115,11 @@ const ProjectCard = ({
         </div>
         <div className="card-right">
           <h2>{title}</h2>
+          {groupName && <p className="group-name"><em>by {groupName}</em></p>}
           <div className="text-box">
             <p><strong>Members:</strong></p>
             <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-              {members.map((member, idx) => (
+              {groupMembers.slice(0, 3).map((member, idx) => (
                 <li key={idx}>{member}</li>
               ))}
             </ul>

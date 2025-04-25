@@ -7,6 +7,7 @@ import AccountPage from './pages/AccountPage';
 import SearchPage from './pages/SearchPage';
 import MusicPage from './pages/MusicPage';
 import GroupsPage from './pages/GroupsPage';
+import GroupDetailPage from './pages/GroupDetailPage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="search" element={<SearchPage />} />
           <Route path="account" element={<AccountPage />} />
           <Route path="groups" element={<GroupsPage />} />
+          <Route path="/groups/:groupId" element={<GroupDetailPage />} />
           <Route path="music" element={<MusicPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />

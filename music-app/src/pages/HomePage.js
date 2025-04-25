@@ -16,7 +16,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
         <ProjectCard
           key={index}
           title={project.title}
-          members={project.members}
+          groupMembers={project.members}
           genres={project.genres}
           image={project.image}
           runtime={project.runtime}

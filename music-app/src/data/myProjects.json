@@ -48,5 +48,24 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "audioFile": "./audio/forca.m4a"
+  },
+  {
+    "title": "Proj",
+    "projectId": "a9332012-f3e9-4276-a2e9-725bca7d3e53",
+    "groupId": "",
+    "members": [
+      "me",
+      "you"
+    ],
+    "runtime": "6m, 32s",
+    "genres": [
+      "Rock"
+    ],
+    "instruments": [
+      "Vocals",
+      "Guitar"
+    ],
+    "image": "uploads/1745606385329-IMG_5992.jpeg",
+    "audioFile": "uploads/1745606385349-Bolivia.wav"
   }
 ]

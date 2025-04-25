@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
 const multer = require('multer');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const PORT = 3001;
@@ -31,7 +32,7 @@ const projectsFilePath = path.join(__dirname, 'src/data', 'myProjects.json');
 app.post('/api/add-group', (req, res) => {
   const newGroup = req.body;
 
-  if (!newGroup.title || !newGroup.members || !newGroup.genres || !newGroup.audioFile) {
+  if (!newGroup.title || !newGroup.members || !newGroup.genres || !newGroup.audioFile || !newGroup.groupId) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 
@@ -52,7 +53,7 @@ app.post('/api/add-group', (req, res) => {
 app.post('/api/add-project', (req, res) => {
   const newProject = req.body;
 
-  if (!newProject.title || !newProject.members || !newProject.genres || !newProject.audioFile) {
+  if (!newProject.title || !newProject.members || !newProject.genres || !newProject.audioFile || !newProject.projectId) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 
@@ -85,6 +86,8 @@ app.post('/api/upload', upload.fields([
 
   const cleanedProject = {
     title,
+    projectId: uuidv4(),
+    groupId: "",
     members: members.split(',').map(m => m.trim()), // Split into array
     runtime: audioRuntime,
     genres: parseJsonArray(selectedGenres),
