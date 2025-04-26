@@ -15,7 +15,7 @@ const AccountPage = () => {
 
   return (
     <div>
-      <PageHeader title="MY ACCOUNT" />
+      <PageHeader title="Profile" />
       <div className="account-container">
         <div className="user-info">
           <img src={photo || "https://via.placeholder.com/100"} alt="User" className="user-photo" />
