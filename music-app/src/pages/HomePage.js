@@ -32,7 +32,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
             onExpand={() => setExpandedTitle(project.title)}
             onCollapse={() => setExpandedTitle(null)}
             blurred={expandedTitle !== null && expandedTitle !== project.title}
-            search={true}
+            search={false}
             audioFile={project.audioFile}
             groupName={group?.name || "Unknown Group"}
             groupMembers={group?.members || []}
