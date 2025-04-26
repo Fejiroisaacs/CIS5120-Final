@@ -94,3 +94,19 @@
 .card-details a:hover {
     text-decoration: underline;
 }
+
+.leave-button {
+    background-color: #ff6961;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .leave-button:hover {
+    background-color: #e60000;
+  }
+  
