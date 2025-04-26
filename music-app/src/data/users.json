@@ -1,0 +1,58 @@
+{
+    "User Info" : {
+        "ID" : 0,
+        "photo" : "uploads/1745109470348-MV5BZjBlNTYzNzAtNjkzYS00Yzk0LThiMWUtYjQ2ZDI1MzJhYzgxXkEyXkFqcGc@._V1_.jpg",
+        "name" : " Joe Barerd",
+        "bio" : "Played bass in a '70s garage band, still jams in mom's basement!",
+        "Instruments" : "Piano, Bass, Drums",
+        "Genres" : "Indie, Alternative, Rock"
+    },
+    "Songs" : [
+        {
+            "photo" : "./images/disc-32390_1280.webp",
+            "Artist" : "John Son",
+            "title" : "Singing In The Rain",
+            "song_url" : "./audio/forca.m4a"
+        },
+        {
+            "photo" : "./images/disc-32390_1280.webp",
+            "Artist" : "John Son",
+            "title" : "Singing In The Rain",
+            "song_url" : "./audio/forca.m4a"
+        },
+        {
+            "photo" : "./images/disc-32390_1280.webp",
+            "Artist" : "John Son",
+            "title" : "Singing In The Rain",
+            "song_url" : "./audio/forca.m4a"
+        },
+        {
+            "photo" : "./images/disc-32390_1280.webp",
+            "Artist" : "John Son",
+            "title" : "Singing In The Rain",
+            "song_url" : "./audio/forca.m4a"
+        }
+    ],
+    "groups" : [
+        {
+            "photo" : "/images/disc-32390_1280.webp",
+            "Name" : "THE HARMONICS",
+            "members" : ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]
+        },
+        {
+            "photo" : "/images/disc-32390_1280.webp",
+            "Name" : "THE HARMONICS",
+            "members" : ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]
+        },
+        {
+            "photo" : "/images/disc-32390_1280.webp",
+            "Name" : "THE HARMONICS",
+            "members" : ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]
+        },
+        {
+            "photo" : "/images/disc-32390_1280.webp",
+            "Name" : "THE HARMONICS",
+            "members" : ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf"]
+        }
+    ]
+}
