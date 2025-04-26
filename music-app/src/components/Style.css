@@ -104,9 +104,30 @@
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  .leave-button:hover {
+.leave-button:hover {
     background-color: #e60000;
+}
+
+audio {
+    width: 200px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 8px;
   }
   
+audio::-webkit-media-controls-panel {
+    background-color: #e1f4ee;
+    border-radius: 8px;
+}
+  
+audio::-webkit-media-controls-play-button {
+    background-color: #aeede0;
+    border-radius: 50%;
+}
+  
+audio::-webkit-media-controls-volume-slider {
+    background-color: #dfe6e9;
+}
+    
