@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader.js";
 import "../components/Style.css";
-import "../components/create.css";  
+import "../components/create.css";
 
 const genres = ["Rock", "Pop", "Country", "Indie", "Alternative"];
 const instruments = ["Vocals", "Guitar", "Piano", "Bass", "Drums"];
+const demoGroups = ["THE HARMONICS", "ECHO SOUND", "DISCO PRINCE"]; 
 
 const CreatePage = () => {
   const [projectData, setProjectData] = useState({
@@ -12,15 +13,18 @@ const CreatePage = () => {
     members: "",
     image: null,
     audio: null,
-    audioRuntime: null, // New state for runtime
+    audioRuntime: null,
     selectedGenres: [],
-    selectedInstruments: []
+    selectedInstruments: [],
+    projectType: "individual",
+    selectedGroup: ""
   });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setProjectData((prevData) => ({
       ...prevData,
-      [e.target.name]: e.target.value
+      [name]: value
     }));
     console.log(projectData);
   };
@@ -34,24 +38,24 @@ const CreatePage = () => {
         : prevData[category].filter((item) => item !== value)
     }));
   };
-  
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setProjectData((prevData) => ({
       ...prevData,
       [e.target.name]: file
     }));
-  
+
     if (e.target.name === "audio") {
       const audioElement = new Audio(URL.createObjectURL(file));
       audioElement.addEventListener("loadedmetadata", () => {
         const minutes = Math.floor(audioElement.duration / 60);
         const seconds = Math.floor(audioElement.duration % 60);
-        const formattedRuntime = `${minutes}m, ${seconds}s`; 
-  
+        const formattedRuntime = `${minutes}m, ${seconds}s`;
+
         setProjectData((prevData) => ({
           ...prevData,
-          audioRuntime: formattedRuntime 
+          audioRuntime: formattedRuntime
         }));
       });
     }
@@ -64,18 +68,20 @@ const CreatePage = () => {
     formData.append("title", projectData.title);
     formData.append("members", projectData.members);
     formData.append("genres", projectData.genres);
-    formData.append("instruments", projectData.genres);
+    formData.append("instruments", projectData.instruments);
     formData.append("image", projectData.image);
     formData.append("audio", projectData.audio);
     formData.append("audioRuntime", projectData.audioRuntime);
     formData.append("selectedGenres", JSON.stringify(projectData.selectedGenres));
     formData.append("selectedInstruments", JSON.stringify(projectData.selectedInstruments));
+    formData.append("projectType", projectData.projectType);
+    formData.append("selectedGroup", projectData.selectedGroup);
 
     try {
-        for (let pair of formData.entries()) {
-          console.log(pair[0] + ": ", pair[1]);
-        }
-        const response = await fetch("http://localhost:3001/api/upload", {
+      for (let pair of formData.entries()) {
+        console.log(pair[0] + ": ", pair[1]);
+      }
+      const response = await fetch("http://localhost:3001/api/upload", {
         method: "POST",
         body: formData
       });
@@ -96,71 +102,124 @@ const CreatePage = () => {
   return (
     <div className="create-page-wrapper">
       <PageHeader title="Create a Project" />
-    <div className="create-page-container">
-      <form onSubmit={handleSubmit} className="create-form">
-        <div className="form-group">
-          <label>Project Title:</label>
-          <input type="text" name="title" value={projectData.title} onChange={handleChange} required placeholder="Enter project title" />
-        </div>
-
-        <div className="form-group">
-          <label>Members:</label>
-          <input type="text" name="members" value={projectData.members} onChange={handleChange} placeholder="Enter member names" />
-        </div>
-
-        <div className="form-group">
-          <label>Select Genres:</label>
-          <div className="checkbox-group">
-            {genres.map((genre) => (
-              <label key={genre} className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  value={genre} 
-                  onChange={(e) => handleCheckboxChange(e, "selectedGenres")} 
-                  checked={projectData.selectedGenres.includes(genre)}
-                />
-                {genre}
-              </label>
-            ))}
+      <div className="create-page-container">
+        <form onSubmit={handleSubmit} className="create-form">
+          <div className="form-group">
+            <label>Project Title:</label>
+            <input 
+              type="text" 
+              name="title" 
+              value={projectData.title} 
+              onChange={handleChange} 
+              required 
+              placeholder="Enter project title" 
+            />
           </div>
-        </div>
 
-        <div className="form-group">
-          <label>Select Instruments:</label>
-          <div className="checkbox-group">
-            {instruments.map((instrument) => (
-              <label key={instrument} className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  value={instrument} 
-                  onChange={(e) => handleCheckboxChange(e, "selectedInstruments")} 
-                  checked={projectData.selectedInstruments.includes(instrument)}
-                />
-                {instrument}
-              </label>
-            ))}
+          <div className="form-group">
+            <label>Members:</label>
+            <input 
+              type="text" 
+              name="members" 
+              value={projectData.members} 
+              onChange={handleChange} 
+              placeholder="Enter member names" 
+            />
           </div>
-        </div>
 
-        <div className="form-group file-upload">
-          <label>Upload Cover Image:</label>
-          <input type="file" name="image" onChange={handleFileChange} accept="image/*" />
-        </div>
+          <div className="form-group">
+            <label>Project Type:</label>
+            <select 
+              name="projectType" 
+              value={projectData.projectType} 
+              onChange={handleChange}
+              className="select-input"
+            >
+              <option value="individual">Individual</option>
+              <option value="group">Group</option>
+            </select>
+          </div>
 
-        <div className="form-group file-upload">
-          <label>Upload Audio Track:</label>
-          <input type="file" name="audio" onChange={handleFileChange} accept="audio/*" />
-        </div>
+          {projectData.projectType === "group" && (
+            <div className="form-group">
+              <label>Select Group:</label>
+              <select 
+                name="selectedGroup" 
+                value={projectData.selectedGroup} 
+                onChange={handleChange}
+                className="select-input"
+              >
+                <option value="">-- Select a Group --</option>
+                {demoGroups.map((group, idx) => (
+                  <option key={idx} value={group}>{group}</option>
+                ))}
+              </select>
+            </div>
+          )}
 
-        {projectData.audioRuntime && (
-          <p className="runtime-display">
-            Audio Runtime: <strong>{projectData.audioRuntime} seconds</strong>
-          </p>
-        )}
+          <div className="form-group">
+            <label>Select Genres:</label>
+            <div className="checkbox-group">
+              {genres.map((genre) => (
+                <label key={genre} className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    value={genre} 
+                    onChange={(e) => handleCheckboxChange(e, "selectedGenres")} 
+                    checked={projectData.selectedGenres.includes(genre)}
+                  />
+                  {genre}
+                </label>
+              ))}
+            </div>
+          </div>
 
-        <button type="submit" className="submit-btn">Create Project</button>
-      </form>
-    </div>
+          <div className="form-group">
+            <label>Select Instruments:</label>
+            <div className="checkbox-group">
+              {instruments.map((instrument) => (
+                <label key={instrument} className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    value={instrument} 
+                    onChange={(e) => handleCheckboxChange(e, "selectedInstruments")} 
+                    checked={projectData.selectedInstruments.includes(instrument)}
+                  />
+                  {instrument}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className="form-group file-upload">
+            <label>Upload Cover Image:</label>
+            <input 
+              type="file" 
+              name="image" 
+              onChange={handleFileChange} 
+              accept="image/*" 
+            />
+          </div>
+
+          <div className="form-group file-upload">
+            <label>Upload Audio Track:</label>
+            <input 
+              type="file" 
+              name="audio" 
+              onChange={handleFileChange} 
+              accept="audio/*" 
+            />
+          </div>
+
+          {projectData.audioRuntime && (
+            <p className="runtime-display">
+              Audio Runtime: <strong>{projectData.audioRuntime}</strong>
+            </p>
+          )}
+
+          <button type="submit" className="submit-btn">Create Project</button>
+        </form>
+      </div>
     </div>
   );
 };
