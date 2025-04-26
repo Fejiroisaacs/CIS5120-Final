@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./ProjectCard.css";
+import groupsData from "../data/groups.json"; // adjust path!
 
 const ProjectCard = ({
   title,
@@ -17,12 +18,16 @@ const ProjectCard = ({
   onCollapse,
   blurred,
   audioFile,
-  search
+  search,
 }) => {
 
 
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+
+  console.log(image);
+  console.log(audioFile);
+
 
   const handleCardClick = (e) => {
     // Don't expand/collapse if clicking on audio controls
@@ -64,25 +69,20 @@ const ProjectCard = ({
   };
   
   const handleApplyToGroup = async () => {
-    const groupData = {
-      title,
-      projectId,
-      groupId,
-      genres,
-      instruments,
-      image,
-      runtime,
-      creationDate,
-      audioFile
-    };
-  
+    const group = groupsData.find(g => g.groupId === groupId);
+
+    if (!group) {
+      console.error("Group not found!");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost:3001/api/add-group", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(groupData)
+        body: JSON.stringify(group)
       });
   
       if (!response.ok) {

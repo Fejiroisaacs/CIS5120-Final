@@ -32,7 +32,7 @@ const projectsFilePath = path.join(__dirname, 'src/data', 'myProjects.json');
 app.post('/api/add-group', (req, res) => {
   const newGroup = req.body;
 
-  if (!newGroup.title || !newGroup.members || !newGroup.genres || !newGroup.audioFile || !newGroup.groupId) {
+  if (!newGroup.name || !newGroup.members || !newGroup.groupId) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 

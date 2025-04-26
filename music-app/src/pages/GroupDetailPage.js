@@ -64,7 +64,7 @@ const GroupDetailPage = () => {
             onExpand={() => setExpandedTitle(project.title)}
             onCollapse={() => setExpandedTitle(null)}
             blurred={false}
-            search={true}
+            search={false}
             audioFile={project.audioFile}
             groupName={group.name}
             groupMembers={group.members}

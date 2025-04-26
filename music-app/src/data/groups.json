@@ -2,19 +2,68 @@
   {
     "name": "THE HARMONICS",
     "groupId": "g1",
-    "members": ["Jake Murphy", "Fejiro Anigboro", "Solomon Graf", "James Be", "Grant Sly", "Jacob John"],
-    "projectIds": ["p1", "p2"]
+    "members": [
+      "Jake Murphy",
+      "Fejiro Anigboro",
+      "Solomon Graf",
+      "James Be",
+      "Grant Sly",
+      "Jacob John"
+    ],
+    "projectIds": [
+      "p1",
+      "p2"
+    ]
   },
   {
     "name": "ECHO SOUND",
     "groupId": "g2",
-    "members": ["Jamie Jim", "Ben Cambel", "Alex Carter", "Jamie Lee", "Sam Fox", "Riley James", "Morgan Bell"],
-    "projectIds": ["p3", "p4", "p5"]
+    "members": [
+      "Jamie Jim",
+      "Ben Cambel",
+      "Alex Carter",
+      "Jamie Lee",
+      "Sam Fox",
+      "Riley James",
+      "Morgan Bell"
+    ],
+    "projectIds": [
+      "p3",
+      "p4",
+      "p5"
+    ]
   },
   {
     "name": "DISCO PRINCE",
     "groupId": "g3",
-    "members": ["Jessie Taylor", "Chris Lane", "Justin Sung", "Carmen Toledo", "Casey Walker", "Blake Rivers"],
-    "projectIds": ["p6", "p7", "p8"]
+    "members": [
+      "Jessie Taylor",
+      "Chris Lane",
+      "Justin Sung",
+      "Carmen Toledo",
+      "Casey Walker",
+      "Blake Rivers"
+    ],
+    "projectIds": [
+      "p6",
+      "p7",
+      "p8"
+    ]
+  },
+  {
+    "name": "THE HARMONICS",
+    "groupId": "g1",
+    "members": [
+      "Jake Murphy",
+      "Fejiro Anigboro",
+      "Solomon Graf",
+      "James Be",
+      "Grant Sly",
+      "Jacob John"
+    ],
+    "projectIds": [
+      "p1",
+      "p2"
+    ]
   }
 ]
