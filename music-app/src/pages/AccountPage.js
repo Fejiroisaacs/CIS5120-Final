@@ -32,7 +32,7 @@ const AccountPage = () => {
                     <p><strong>{song.title || "Untitled"}</strong></p>
                     <p>{song.Artist || "Unknown Artist"}</p>
                     {song.song_url ? (
-                      <audio controls style={{ width: '100%' }}>
+                      <audio controls style={{ width: '10vw' }}>
                         <source src={song.song_url} type="audio/m4a" />
                         <source src={song.song_url.replace('.m4a', '.mp3')} type="audio/mp3" />
                         <source src={song.song_url.replace('.m4a', '.ogg')} type="audio/ogg" />
