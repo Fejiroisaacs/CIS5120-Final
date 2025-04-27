@@ -7,8 +7,8 @@
     "instruments": ["Drums", "Guitar"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "./images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "image": "/images/disc-32390_1280.webp",
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "MYSTIC BEATERS",
@@ -18,8 +18,8 @@
     "instruments": ["Vocals", "Piano"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "./images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "image": "/images/disc-32390_1280.webp",
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "SMILE",
@@ -30,7 +30,7 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "ELEVATE HER",
@@ -41,7 +41,7 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "HAMSTER WHEEL",
@@ -51,8 +51,8 @@
     "instruments": ["Piano", "Bass"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "./images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "image": "/images/disc-32390_1280.webp",
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "WAKE UP MOON",
@@ -63,7 +63,7 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "ALTER EGOS",
@@ -74,7 +74,7 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.m4a"
   },
   {
     "title": "RUNNING FOOS",
@@ -85,6 +85,6 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.m4a"
   }
 ]

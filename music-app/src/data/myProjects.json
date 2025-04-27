@@ -1,6 +1,7 @@
 [
   {
     "title": "THE HARMONICS",
+    "projectId": "p1",
     "members": [
       "Alice",
       "Bob",
@@ -13,11 +14,12 @@
     ],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "./images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.mp3"
+    "image": "/images/disc-32390_1280.webp",
+    "audioFile": "/audio/forca.mp3"
   },
   {
     "title": "ECHO SOUND",
+    "projectId": "p2",
     "members": [
       "Dylan",
       "Erin",
@@ -30,11 +32,12 @@
     ],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "./images/disc-32390_1280.webp",
-    "audioFile": "./audio/forca.mp3"
+    "image": "/images/disc-32390_1280.webp",
+    "audioFile": "/audio/forca.mp3"
   },
   {
     "title": "DISCO PRINCE",
+    "projectId": "p3",
     "members": [
       "Jake Murphy",
       "Fejiro Anigboro",
@@ -44,10 +47,10 @@
       "Pop",
       "Indie"
     ],
-    "image": "./images/disc-32390_1280.webp",
+    "image": "/images/disc-32390_1280.webp",
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "audioFile": "./audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3"
   },
   {
     "title": "Proj",
@@ -67,22 +70,5 @@
     ],
     "image": "uploads/1745606385329-IMG_5992.jpeg",
     "audioFile": "uploads/1745606385349-Bolivia.wav"
-  },
-  {
-    "title": "DISCO PRINCE",
-    "projectId": "p1",
-    "groupId": "g1",
-    "genres": [
-      "Pop",
-      "Indie"
-    ],
-    "instruments": [
-      "Drums",
-      "Guitar"
-    ],
-    "image": "./images/disc-32390_1280.webp",
-    "runtime": "1m, 27 s",
-    "creationDate": "July 4",
-    "audioFile": "./audio/forca.m4a"
   }
 ]
