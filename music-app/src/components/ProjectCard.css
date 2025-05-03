@@ -28,7 +28,7 @@
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .card-left {
@@ -118,17 +118,30 @@
   gap: 0.5rem;
 }
 
-.card-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+.audio-element {
+  flex: 1;
+  min-width: 150px;  /* or increase as needed */
+  max-width: 50%;
 }
 
 .card-actions {
   display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.card-buttons-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+}
+.card-actions-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .card-button {
@@ -146,3 +159,41 @@
   background-color: #a0d0e1;
 }
 
+.audio-history {
+  margin-top: 1rem;
+}
+
+.audio-history-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 10;
+  max-height: 250px; /* Adjust as needed */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* For scroll padding */
+}
+
+.card-actions {
+  position: relative; /* to anchor the dropdown absolutely */
+}
+
+.audio-history-item {
+  margin-bottom: 1rem;
+}
+
+.audio-history-player {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.history-label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}

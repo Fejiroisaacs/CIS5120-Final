@@ -8,7 +8,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "MYSTIC BEATERS",
@@ -19,7 +24,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "SMILE",
@@ -30,7 +40,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "ELEVATE HER",
@@ -41,7 +56,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "HAMSTER WHEEL",
@@ -52,7 +72,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "WAKE UP MOON",
@@ -63,7 +88,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "ALTER EGOS",
@@ -74,7 +104,12 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   },
   {
     "title": "RUNNING FOOS",
@@ -85,6 +120,11 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.m4a"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
   }
 ]

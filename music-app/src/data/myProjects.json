@@ -53,22 +53,34 @@
     "audioFile": "/audio/forca.mp3"
   },
   {
-    "title": "Proj",
-    "projectId": "a9332012-f3e9-4276-a2e9-725bca7d3e53",
-    "groupId": "",
-    "members": [
-      "me",
-      "you"
-    ],
-    "runtime": "6m, 32s",
+    "title": "MYSTIC BEATERS",
+    "projectId": "p2",
+    "groupId": "g1",
     "genres": [
-      "Rock"
+      "Country",
+      "Pop"
     ],
     "instruments": [
       "Vocals",
-      "Guitar"
+      "Piano"
     ],
-    "image": "uploads/1745606385329-IMG_5992.jpeg",
-    "audioFile": "uploads/1745606385349-Bolivia.wav"
+    "image": "/images/disc-32390_1280.webp",
+    "runtime": "1m, 27 s",
+    "creationDate": "July 4",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      {
+        "label": "Rough Cut",
+        "file": "/audio/forca.m4a"
+      },
+      {
+        "label": "Mixdown",
+        "file": "/audio/forca.m4a"
+      },
+      {
+        "label": "Mastered",
+        "file": "/audio/forca.m4a"
+      }
+    ]
   }
 ]
