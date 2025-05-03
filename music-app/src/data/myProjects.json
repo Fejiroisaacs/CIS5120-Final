@@ -1,7 +1,7 @@
 [
   {
     "title": "THE HARMONICS",
-    "projectId": "p1",
+    "projectId": "mp1",
     "members": [
       "Alice",
       "Bob",
@@ -33,11 +33,25 @@
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
     "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.mp3"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      {
+        "label": "New mix",
+        "file": "uploads/1746303039623-Bolivia.wav"
+      },
+      {
+        "label": "New mix",
+        "file": "uploads/1746303075190-Bolivia.wav"
+      },
+      {
+        "label": "mix",
+        "file": "uploads/1746303140699-forca.mp3"
+      }
+    ]
   },
   {
     "title": "DISCO PRINCE",
-    "projectId": "p3",
+    "projectId": "mp3",
     "members": [
       "Jake Murphy",
       "Fejiro Anigboro",

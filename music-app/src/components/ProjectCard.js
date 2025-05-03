@@ -6,6 +6,8 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import HistoryIcon from '@mui/icons-material/History';
 import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import DownloadIcon from "@mui/icons-material/Download";
+import { IconButton } from "@mui/material";
 
 const ProjectCard = ({
   title,
@@ -28,6 +30,7 @@ const ProjectCard = ({
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
+  const [showUploadForm, setShowUploadForm] = useState(false);
   const audioRef = useRef(null);
 
   console.log(audioHistory)
@@ -192,6 +195,18 @@ const ProjectCard = ({
                     </button>
                   </>
                 )}
+                {!search && (
+                  <button
+                    className="card-button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowUploadForm(prev => !prev);
+                    }}
+                    title="Upload Audio Version"
+                  >
+                    <AddIcon />
+                  </button>
+                )}
 
                 <button className="card-button" onClick={(e) => {
                   e.stopPropagation();
@@ -219,8 +234,9 @@ const ProjectCard = ({
                 {isExpanded && showHistory && audioHistory.length > 0 && (
                   <div className="audio-history-dropdown">
                     {audioHistory.map((entry, idx) => (
-                      <div key={idx} className="audio-history-item">
-                        <p className="history-label">{entry.label || `Version ${idx + 1}`}</p>
+                    <div key={idx} className="audio-history-item">
+                      <p className="history-label">{entry.label || `Version ${idx + 1}`}</p>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <audio controls className="audio-history-player">
                           <source src={entry.file} type="audio/m4a" />
                           <source src={entry.file.replace(".m4a", ".mp3")} type="audio/mp3" />
@@ -228,17 +244,71 @@ const ProjectCard = ({
                           Your browser does not support the audio element.
                         </audio>
                         {!search && (
-                          <a
+                          <IconButton
+                            onClick={(e) => e.stopPropagation()}
+                            component="a"
                             href={entry.file}
                             download
-                            className="card-button download-button"
-                            onClick={(e) => e.stopPropagation()}
+                            size="small"
+                            sx={{ color: "inherit" }}
                           >
-                            Download
-                          </a>
+                            <DownloadIcon />
+                          </IconButton>
                         )}
                       </div>
-                    ))}
+                    </div>
+                  ))}
+                  </div>
+                )}
+                {!search && isExpanded && showUploadForm && (
+                  <div
+                    className="audio-history-dropdown"
+                    onClick={(e) => e.stopPropagation()} // prevent card collapse
+                    style={{ marginTop: "1rem", padding: "0.5rem", border: "1px solid #ccc", borderRadius: "8px" }}
+                  >
+                    <form
+                      className="upload-history-form"
+                      onSubmit={async (e) => {
+                        e.preventDefault();
+                      
+                        const formData = new FormData();
+                        const file = e.target.elements.audioFile.files[0]; // Get selected file
+                        const label = e.target.elements.label.value; // Get label value
+                      
+                        // Check if file is selected
+                        if (!file) {
+                          return alert("Please select an audio file.");
+                        }
+                      
+                        // Append the form data with file and label
+                        formData.append("file", file); // 'file' matches the field expected by the server
+                        formData.append("title", label); // 'title' should match the field name on the server
+                      
+                        try {
+                          // Make POST request to the server to upload the audio history
+                          const response = await fetch(`http://localhost:3001/api/add-audio-history/${projectId}`, {
+                            method: "POST",
+                            body: formData,
+                          });
+                      
+                          if (!response.ok) {
+                            const errorData = await response.json();
+                            throw new Error(errorData.error || "Upload failed");
+                          }
+                      
+                          console.log("Audio uploaded successfully");
+                          setShowUploadForm(false); // Hide form after upload
+                          // window.location.reload(); // Refresh to reflect the new version
+                        } catch (error) {
+                          console.error("Error uploading audio history:", error.message);
+                        }
+                      }}
+                      style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+                    >
+                      <input type="file" name="audioFile" accept="audio/*" required />
+                      <input type="text" name="label" placeholder="Optional label" />
+                      <button type="submit" className="card-button">Upload</button>
+                    </form>
                   </div>
                 )}
             </div>

@@ -112,6 +112,37 @@ app.post('/api/upload', upload.fields([
   }
 });
 
+app.post('/api/add-audio-history/:projectId', upload.single('file'), (req, res) => {
+  const { title } = req.body;
+  const { projectId } = req.params;
+  const file = req.file;
+
+  if (!title || !file) {
+    return res.status(400).json({ error: 'Missing title or file' });
+  }
+
+  try {
+    const data = fs.readFileSync(projectsFilePath, 'utf-8');
+    const projects = JSON.parse(data);
+
+    const project = projects.find(p => p.projectId === projectId);
+    if (!project) return res.status(404).json({ error: 'Project not found' });
+
+    if (!project.audioHistory) project.audioHistory = [];
+
+    project.audioHistory.push({
+      label: title,
+      file: `uploads/${file.filename}`
+    });
+
+    fs.writeFileSync(projectsFilePath, JSON.stringify(projects, null, 2));
+    res.status(200).json({ message: 'Audio history updated' });
+  } catch (err) {
+    console.error('Error updating audio history:', err);
+    res.status(500).json({ error: 'Failed to update project file' });
+  }
+});
+
 function parseJsonArray(data) {
   try {
     const parsed = JSON.parse(data);

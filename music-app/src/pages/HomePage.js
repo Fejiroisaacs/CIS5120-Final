@@ -36,6 +36,7 @@ const MyResults = ({ data, expandedTitle, setExpandedTitle }) => {
             audioFile={project.audioFile}
             groupName={group?.name || "Unknown Group"}
             groupMembers={group?.members || []}
+            audioHistory={project.audioHistory}
           />
         );
       })}
