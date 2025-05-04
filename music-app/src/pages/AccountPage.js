@@ -26,10 +26,6 @@ const AccountPage = () => {
     image: cleanPath(project.image),
   }));
 
-  console.log(userGroups);
-  console.log(cleanedProjects);
-
-
   const [groups, setGroups] = useState(userGroups);
   
   const handleLeaveGroup = (indexToRemove) => {
@@ -60,7 +56,7 @@ const AccountPage = () => {
                   <img src={song.image || "https://via.placeholder.com/80"} alt="Song" className="card-photo" />
                   <div className="card-details">
                     <p><strong>{song.title || "Untitled"}</strong></p>
-                    <p>{song.members.length > 0 ? song.members.join(', ') : "Unknown Artist"}</p>
+                    <p>{song.members && song.members.length > 0 ? song.members.join(', ') : "Joe Barerd"}</p>
                     {song.audioFile ? (
                       <audio controls style={{ width: '10vw' }}>
                         <source src={song.audioFile} type="audio/m4a" />
@@ -82,7 +78,7 @@ const AccountPage = () => {
             <div className="card-section">
               {groups.map((group, index) => (
                 <div className="card" key={index}>
-                  <img src={group.photo || "https://via.placeholder.com/80"} alt="Group" className="card-photo" />
+                  <img src={group.image || "https://via.placeholder.com/80"} alt="Group" className="card-photo" />
                   <div className="card-details">
                     <p><strong>{group.name || "Unnamed Group"}</strong></p>
                     <p><strong>Members:</strong><br />{group.members.length > 0 ? group.members.join(', ') : "No members"}</p>

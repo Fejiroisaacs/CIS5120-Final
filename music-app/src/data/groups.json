@@ -6,14 +6,13 @@
       "Jake Murphy",
       "Fejiro Anigboro",
       "Solomon Graf",
-      "James Be",
-      "Grant Sly",
-      "Jacob John"
+      "Joe Barerd"
     ],
     "projectIds": [
       "p1",
       "p2"
-    ]
+    ],
+    "image": "/images/14.jpg"
   },
   {
     "name": "ECHO SOUND",
@@ -22,16 +21,15 @@
       "Jamie Jim",
       "Ben Cambel",
       "Alex Carter",
-      "Jamie Lee",
-      "Sam Fox",
-      "Riley James",
+      "Joe Barerd",
       "Morgan Bell"
     ],
     "projectIds": [
       "p3",
       "p4",
       "p5"
-    ]
+    ],
+    "image": "/images/1.jpg"
   },
   {
     "name": "DISCO PRINCE",
@@ -41,29 +39,14 @@
       "Chris Lane",
       "Justin Sung",
       "Carmen Toledo",
-      "Casey Walker",
-      "Blake Rivers"
+      "Blake Rivers",
+      "Joe Barerd"
     ],
     "projectIds": [
       "p6",
       "p7",
       "p8"
-    ]
-  },
-  {
-    "name": "THE HARMONICS",
-    "groupId": "g1",
-    "members": [
-      "Jake Murphy",
-      "Fejiro Anigboro",
-      "Solomon Graf",
-      "James Be",
-      "Grant Sly",
-      "Jacob John"
     ],
-    "projectIds": [
-      "p1",
-      "p2"
-    ]
+    "image": "/images/29.jpg"
   }
 ]
