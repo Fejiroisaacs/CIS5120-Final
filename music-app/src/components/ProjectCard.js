@@ -8,6 +8,7 @@ import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import DownloadIcon from "@mui/icons-material/Download";
 import { IconButton } from "@mui/material";
+import Feedback from './FeedbackCard';
 
 const ProjectCard = ({
   title,
@@ -33,11 +34,22 @@ const ProjectCard = ({
   const [showUploadForm, setShowUploadForm] = useState(false);
   const audioRef = useRef(null);
 
+
+  const [feedback, setFeedback] = useState({ show: false, message: '', type: 'success' });
+
+  const closeFeedback = () => {
+    setFeedback(prev => ({ ...prev, show: false }));
+  };
+
   console.log(audioHistory)
 
   const handleCardClick = (e) => {
-    if (e.target.closest('audio, .audio-player, .card-button')) return;
-    isExpanded ? onCollapse() : onExpand();
+    if (e.target.closest('audio, .audio-player, .card-button, .feedback')) return;
+    if (isExpanded) {
+      onCollapse();
+      setShowHistory(false);
+      setShowUploadForm(false);
+    } else onExpand();
   };
 
   const handleAddProject = async () => {
@@ -65,11 +77,26 @@ const ProjectCard = ({
 
       if (!response.ok) {
         const errorData = await response.json();
+        setFeedback({
+          show: true,
+          message: "Failed to add project",
+          type: "error"
+        });
         throw new Error(errorData.error || "Failed to add project");
       }
 
       console.log("Project added successfully!");
+      setFeedback({
+        show: true,
+        message: "Project added successfully!",
+        type: "success"
+      });
     } catch (error) {
+      setFeedback({
+        show: true,
+        message: "Failed to add project",
+        type: "error"
+      });
       console.error("Error adding project:", error.message);
     }
   };
@@ -92,12 +119,27 @@ const ProjectCard = ({
 
       if (!response.ok) {
         const errorData = await response.json();
+        setFeedback({
+          show: true,
+          message: "Failed to apply to group",
+          type: "error"
+        });
         throw new Error(errorData.error || "Failed to apply to group");
       }
 
       console.log("Applied to group successfully!");
+      setFeedback({
+        show: true,
+        message: "Applied to group successfully!",
+        type: "success"
+      });
     } catch (error) {
       console.error("Error applying to group:", error.message);
+      setFeedback({
+        show: true,
+        message: "Failed to apply to group",
+        type: "error"
+      });
     }
   };
 
@@ -152,6 +194,7 @@ const ProjectCard = ({
               <audio
                 ref={audioRef}
                 controls
+                controlsList="nodownload noplaybackrate"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
@@ -171,6 +214,7 @@ const ProjectCard = ({
                 <audio
                   ref={audioRef}
                   controls
+                  controlsList="nodownload noplaybackrate"
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
                   onEnded={() => setIsPlaying(false)}
@@ -183,7 +227,7 @@ const ProjectCard = ({
                 </audio>
               </div>
 
-              
+
               <div className="card-buttons-right">
                 {search && (
                   <>
@@ -230,14 +274,18 @@ const ProjectCard = ({
 
               {/* Toggle audio history */}
 
-                {/* Audio History Dropdown */}
-                {isExpanded && showHistory && audioHistory.length > 0 && (
-                  <div className="audio-history-dropdown">
-                    {audioHistory.map((entry, idx) => (
+              {/* Audio History Dropdown */}
+              {isExpanded && showHistory && audioHistory.length > 0 && (
+                <div className="audio-history-dropdown">
+                  {audioHistory.map((entry, idx) => (
                     <div key={idx} className="audio-history-item">
                       <p className="history-label">{entry.label || `Version ${idx + 1}`}</p>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <audio controls className="audio-history-player">
+                        <audio
+                          controls
+                          className="audio-history-player"
+                          controlsList="nodownload noplaybackrate"
+                        >
                           <source src={entry.file} type="audio/m4a" />
                           <source src={entry.file.replace(".m4a", ".mp3")} type="audio/mp3" />
                           <source src={entry.file.replace(".m4a", ".ogg")} type="audio/ogg" />
@@ -258,59 +306,74 @@ const ProjectCard = ({
                       </div>
                     </div>
                   ))}
-                  </div>
-                )}
-                {!search && isExpanded && showUploadForm && (
-                  <div
-                    className="audio-history-dropdown"
-                    onClick={(e) => e.stopPropagation()} // prevent card collapse
-                    style={{ marginTop: "1rem", padding: "0.5rem", border: "1px solid #ccc", borderRadius: "8px" }}
-                  >
-                    <form
-                      className="upload-history-form"
-                      onSubmit={async (e) => {
-                        e.preventDefault();
-                      
-                        const formData = new FormData();
-                        const file = e.target.elements.audioFile.files[0]; // Get selected file
-                        const label = e.target.elements.label.value; // Get label value
-                      
-                        // Check if file is selected
-                        if (!file) {
-                          return alert("Please select an audio file.");
-                        }
-                      
-                        // Append the form data with file and label
-                        formData.append("file", file); // 'file' matches the field expected by the server
-                        formData.append("title", label); // 'title' should match the field name on the server
-                      
-                        try {
-                          // Make POST request to the server to upload the audio history
-                          const response = await fetch(`http://localhost:3001/api/add-audio-history/${projectId}`, {
-                            method: "POST",
-                            body: formData,
+                </div>
+              )}
+              {!search && isExpanded && showUploadForm && (
+                <div
+                  className="audio-history-dropdown"
+                  onClick={(e) => e.stopPropagation()} // prevent card collapse
+                  style={{ marginTop: "1rem", padding: "0.5rem", border: "1px solid #ccc", borderRadius: "8px" }}
+                >
+                  <form
+                    className="upload-history-form"
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+
+                      const formData = new FormData();
+                      const file = e.target.elements.audioFile.files[0]; // Get selected file
+                      const label = e.target.elements.label.value; // Get label value
+
+                      // Check if file is selected
+                      if (!file) {
+                        return alert("Please select an audio file.");
+                      }
+
+                      // Append the form data with file and label
+                      formData.append("file", file); // 'file' matches the field expected by the server
+                      formData.append("title", label); // 'title' should match the field name on the server
+
+                      try {
+                        // Make POST request to the server to upload the audio history
+                        const response = await fetch(`http://localhost:3001/api/add-audio-history/${projectId}`, {
+                          method: "POST",
+                          body: formData,
+                        });
+
+                        if (!response.ok) {
+                          const errorData = await response.json();
+                          setFeedback({
+                            show: true,
+                            message: "Failed to upload audio",
+                            type: "error"
                           });
-                      
-                          if (!response.ok) {
-                            const errorData = await response.json();
-                            throw new Error(errorData.error || "Upload failed");
-                          }
-                      
-                          console.log("Audio uploaded successfully");
-                          setShowUploadForm(false); // Hide form after upload
-                          // window.location.reload(); // Refresh to reflect the new version
-                        } catch (error) {
-                          console.error("Error uploading audio history:", error.message);
+                          throw new Error(errorData.error || "Upload failed");
                         }
-                      }}
-                      style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
-                    >
-                      <input type="file" name="audioFile" accept="audio/*" required />
-                      <input type="text" name="label" placeholder="Optional label" />
-                      <button type="submit" className="card-button">Upload</button>
-                    </form>
-                  </div>
-                )}
+
+                        console.log("Audio uploaded successfully");
+                        setFeedback({
+                          show: true,
+                          message: "Audio uploaded successfully!",
+                          type: "success"
+                        });
+                        setShowUploadForm(false); // Hide form after upload
+                        // window.location.reload(); // Refresh to reflect the new version
+                      } catch (error) {
+                        setFeedback({
+                          show: true,
+                          message: "Failed to upload audio",
+                          type: "error"
+                        });
+                        console.error("Error uploading audio history:", error.message);
+                      }
+                    }}
+                    style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+                  >
+                    <input type="file" name="audioFile" accept="audio/*" required />
+                    <input type="text" name="label" placeholder="Optional label" />
+                    <button type="submit" className="card-button">Upload</button>
+                  </form>
+                </div>
+              )}
             </div>
           )}
 
@@ -328,6 +391,14 @@ const ProjectCard = ({
               </ul>
             </div>
           )} */}
+
+          {feedback.show && (
+            <Feedback
+              message={feedback.message}
+              type={feedback.type}
+              onClose={closeFeedback}
+            />
+          )}
         </div>
       </div>
     </>

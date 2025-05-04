@@ -102,7 +102,7 @@ const SearchPage = () => {
 
   return (
     <FilterContext.Provider value={{ filters, setFilters }}> 
-      <NavBar genres={genres} instruments={instruments} />
+      <NavBar genres={genres} instruments={instruments} blurred={expandedTitle != null}/>
       <SearchResults 
         filters={filters}
         data={musicProjects}

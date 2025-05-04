@@ -58,6 +58,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .album-image {
@@ -122,35 +124,27 @@
   pointer-events: none;
 }
 
+.card-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .audio-player {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  width: 100%;
 }
 
 .audio-element {
   flex: 1;
-  min-width: 150px;  /* or increase as needed */
-  max-width: 50%;
-}
-
-.card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  position: relative;
 }
 
 .card-buttons-right {
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 60%;
   display: flex;
-  gap: 0.5rem;
-}
-.card-actions-2 {
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
 }
 

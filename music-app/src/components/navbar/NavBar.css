@@ -38,3 +38,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.blur {
+    filter: blur(4px);
+}
+
+.fill {
+    flex-grow: 1;
+}

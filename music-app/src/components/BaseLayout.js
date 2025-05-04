@@ -4,7 +4,6 @@ import { IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import GroupsIcon from "@mui/icons-material/Groups";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import AddIcon from "@mui/icons-material/Add";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import { useLocation, Link, Outlet } from "react-router-dom";
