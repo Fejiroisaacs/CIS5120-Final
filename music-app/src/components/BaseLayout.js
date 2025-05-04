@@ -31,11 +31,11 @@ const BaseLayout = () => {
               <GroupsIcon />
             </IconButton>
           </Link>
-          <Link to="/music" className="icon-link">
+          {/* <Link to="/music" className="icon-link">
             <IconButton className={`icon-button ${location.pathname === '/music' ? 'active' : ''}`}>
               <MusicNoteIcon />
             </IconButton>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="bottom-icons">
