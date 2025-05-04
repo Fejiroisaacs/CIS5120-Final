@@ -31,6 +31,11 @@
   overflow: visible;
 }
 
+.music-card.expanded img{
+  max-width: fit-content;
+  max-height: 50vh;
+}
+
 .card-left {
   width: 40%;
   height: 100%;

@@ -7,7 +7,7 @@
     "instruments": ["Drums", "Guitar"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/1.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -23,7 +23,7 @@
     "instruments": ["Vocals", "Piano"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/2.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -39,7 +39,7 @@
     "instruments": ["Bass", "Guitar"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/3.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -55,7 +55,7 @@
     "instruments": ["Vocals", "Drums", "Guitar"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/4.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -71,7 +71,7 @@
     "instruments": ["Piano", "Bass"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/5.webp",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -87,7 +87,7 @@
     "instruments": ["Piano", "Bass", "Drums"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/6.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -103,7 +103,7 @@
     "instruments": ["Vocals"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/7.jpg",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
@@ -119,12 +119,312 @@
     "instruments": ["Drums"],
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
+    "image": "/images/8.webp",
     "audioFile": "/audio/forca.mp3",
     "audioHistory": [
       { "label": "Rough Cut", "file": "/audio/forca.mp3" },
       { "label": "Mixdown", "file": "/audio/forca.mp3" },
       { "label": "Mastered", "file": "/audio/forca.mp3" }
     ]
+  },
+  {
+    "title": "MIDNIGHT MIRAGE",
+    "projectId": "p9",
+    "groupId": "g4",
+    "genres": ["Pop", "Indie"],
+    "instruments": ["Vocals", "Piano"],
+    "runtime": "2m, 03 s",
+    "creationDate": "August 10",
+    "image": "/images/9.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "GHOST RADIO",
+    "projectId": "p10",
+    "groupId": "g4",
+    "genres": ["Alternative", "Rock"],
+    "instruments": ["Drums", "Guitar"],
+    "runtime": "1m, 45 s",
+    "creationDate": "August 16",
+    "image": "/images/10.webp",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Initial Loop", "file": "/audio/forca.mp3" },
+      { "label": "Rough Cut", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "TIDAL CRUSH",
+    "projectId": "p11",
+    "groupId": "g5",
+    "genres": ["Indie"],
+    "instruments": ["Guitar", "Vocals"],
+    "runtime": "2m, 12 s",
+    "creationDate": "August 21",
+    "image": "/images/11.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Draft", "file": "/audio/forca.mp3" },
+      { "label": "Mix", "file": "/audio/forca.mp3" },
+      { "label": "Master", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "STREETLIGHT LULLABY",
+    "projectId": "p12",
+    "groupId": "g5",
+    "genres": ["Alternative"],
+    "instruments": ["Bass", "Drums"],
+    "runtime": "1m, 58 s",
+    "creationDate": "September 1",
+    "image": "/images/12.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Beat Loop", "file": "/audio/forca.mp3" },
+      { "label": "Finalized", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "VELVET STRINGS",
+    "projectId": "p13",
+    "groupId": "g6",
+    "genres": ["Country", "Pop"],
+    "instruments": ["Piano", "Guitar"],
+    "runtime": "3m, 10 s",
+    "creationDate": "September 12",
+    "image": "/images/13.webp",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Arrangement", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" },
+      { "label": "Mastered", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "DUST TRAIL",
+    "projectId": "p14",
+    "groupId": "g6",
+    "genres": ["Country"],
+    "instruments": ["Guitar", "Vocals"],
+    "runtime": "2m, 34 s",
+    "creationDate": "September 15",
+    "image": "/images/14.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Rough", "file": "/audio/forca.mp3" },
+      { "label": "Mixdown", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "STATIC BLOOM",
+    "projectId": "p15",
+    "groupId": "g7",
+    "genres": ["Indie", "Alternative"],
+    "instruments": ["Bass", "Drums"],
+    "runtime": "1m, 49 s",
+    "creationDate": "September 18",
+    "image": "/images/15.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Loop", "file": "/audio/forca.mp3" },
+      { "label": "Mix", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "CANYON LIGHTS",
+    "projectId": "p16",
+    "groupId": "g7",
+    "genres": ["Rock"],
+    "instruments": ["Drums", "Vocals"],
+    "runtime": "2m, 21 s",
+    "creationDate": "September 19",
+    "image": "/images/16.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Sketch", "file": "/audio/forca.mp3" },
+      { "label": "Studio", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "COLD CHROME",
+    "projectId": "p17",
+    "groupId": "g8",
+    "genres": ["Alternative", "Pop"],
+    "instruments": ["Vocals", "Piano"],
+    "runtime": "2m, 14 s",
+    "creationDate": "September 21",
+    "image": "/images/17.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Idea", "file": "/audio/forca.mp3" },
+      { "label": "Recorded", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "GOLDEN HOUR SHAKE",
+    "projectId": "p18",
+    "groupId": "g8",
+    "genres": ["Pop"],
+    "instruments": ["Bass", "Drums"],
+    "runtime": "1m, 59 s",
+    "creationDate": "September 23",
+    "image": "/images/18.webp",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "First Pass", "file": "/audio/forca.mp3" },
+      { "label": "Mix", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "BACKSEAT REVIVAL",
+    "projectId": "p19",
+    "groupId": "g6",
+    "genres": ["Rock"],
+    "instruments": ["Guitar", "Drums"],
+    "runtime": "2m, 50 s",
+    "creationDate": "September 25",
+    "image": "/images/19.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Sketch", "file": "/audio/forca.mp3" },
+      { "label": "Final", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "MIDWEST FOG",
+    "projectId": "p20",
+    "groupId": "g7",
+    "genres": ["Country", "Alternative"],
+    "instruments": ["Vocals", "Piano"],
+    "runtime": "2m, 36 s",
+    "creationDate": "September 28",
+    "image": "/images/20.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Acoustic Demo", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "ECHO GARDEN",
+    "projectId": "p21",
+    "groupId": "g8",
+    "genres": ["Indie", "Pop"],
+    "instruments": ["Guitar", "Bass"],
+    "runtime": "1m, 55 s",
+    "creationDate": "September 30",
+    "image": "/images/21.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Loop Idea", "file": "/audio/forca.mp3" },
+      { "label": "Mix", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "BLUE VELVET NIGHT",
+    "projectId": "p22",
+    "groupId": "g9",
+    "genres": ["Pop"],
+    "instruments": ["Vocals", "Piano"],
+    "runtime": "2m, 17 s",
+    "creationDate": "October 2",
+    "image": "/images/22.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Live Session", "file": "/audio/forca.mp3" },
+      { "label": "Edit", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "CLOVER RUN",
+    "projectId": "p23",
+    "groupId": "g9",
+    "genres": ["Country"],
+    "instruments": ["Guitar", "Vocals"],
+    "runtime": "3m, 01 s",
+    "creationDate": "October 4",
+    "image": "/images/23.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Field Recording", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "SUGAR STATIC",
+    "projectId": "p24",
+    "groupId": "g10",
+    "genres": ["Rock", "Alternative"],
+    "instruments": ["Drums", "Bass"],
+    "runtime": "1m, 48 s",
+    "creationDate": "October 6",
+    "image": "/images/24.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Drum Jam", "file": "/audio/forca.mp3" },
+      { "label": "Layered", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "SUNSET CARNIVAL",
+    "projectId": "p25",
+    "groupId": "g10",
+    "genres": ["Pop", "Indie"],
+    "instruments": ["Vocals", "Bass"],
+    "runtime": "2m, 10 s",
+    "creationDate": "October 9",
+    "image": "/images/25.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Demo", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "FIRE IN THE FRAME",
+    "projectId": "p26",
+    "groupId": "g11",
+    "genres": ["Alternative"],
+    "instruments": ["Piano", "Drums"],
+    "runtime": "2m, 00 s",
+    "creationDate": "October 11",
+    "image": "/images/26.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Chords", "file": "/audio/forca.mp3" },
+      { "label": "Final", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "LOST HORIZON",
+    "projectId": "p27",
+    "groupId": "g11",
+    "genres": ["Indie", "Country"],
+    "instruments": ["Guitar", "Bass"],
+    "runtime": "2m, 40 s",
+    "creationDate": "October 12",
+    "image": "/images/27.jpg",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Guitar Riff", "file": "/audio/forca.mp3" }
+    ]
+  },
+  {
+    "title": "NEON FLARE",
+    "projectId": "p28",
+    "groupId": "g12",
+    "genres": ["Rock", "Pop"],
+    "instruments": ["Vocals", "Drums"],
+    "runtime": "2m, 30 s",
+    "creationDate": "October 14",
+    "image": "/images/28.png",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      { "label": "Scratch", "file": "/audio/forca.mp3" },
+      { "label": "Mixed", "file": "/audio/forca.mp3" }
+    ]
   }
 ]
+  
