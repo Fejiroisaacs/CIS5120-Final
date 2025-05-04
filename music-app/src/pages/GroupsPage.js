@@ -23,14 +23,16 @@ const GroupsPage = () => {
             .sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))[0];
 
           return (
-            <GroupCard
-              key={index}
-              name={group.name}
-              members={group.members}
-              genres={genres}
-              audioFile={mostRecent?.audioFile}
-              groupId={group.groupId}
-            />
+            <div key={index} style={{ cursor: "pointer" }}>
+              <GroupCard
+                key={index}
+                name={group.name}
+                members={group.members}
+                genres={genres}
+                audioFile={mostRecent?.audioFile}
+                groupId={group.groupId}
+              />
+            </div>
           );
         })}
       </div>

@@ -1,15 +1,21 @@
 .group-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eef7fa;
-    padding: 1rem 2rem;
-    margin: 1rem auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    max-width: 90%;
-    transition: box-shadow 0.3s ease;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef7fa;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 75%;
+  transition: box-shadow 0.3s ease;
+}
+
+.group-card:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
   
   .group-info {
     display: flex;
