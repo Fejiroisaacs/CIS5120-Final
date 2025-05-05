@@ -1,7 +1,7 @@
 [
   {
     "title": "DISCO SONG",
-    "projectId": "p3",
+    "projectId": "pp1",
     "members": [
       "Jake Murphy",
       "Fejiro Anigboro",
@@ -15,11 +15,17 @@
     "image": "/images/1.jpg",
     "runtime": "1m, 27 s",
     "creationDate": "July 4",
-    "audioFile": "/audio/forca.mp3"
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      {
+        "label": "new",
+        "file": "uploads/1746391971054-forca (2).mp3"
+      }
+    ]
   },
   {
     "title": "MYSTICALLY",
-    "projectId": "p2",
+    "projectId": "pp2",
     "groupId": "g1",
     "genres": [
       "Country",
@@ -50,7 +56,7 @@
   },
   {
     "title": "HEAD ECHOES",
-    "projectId": "p2",
+    "projectId": "pp3",
     "members": [
       "Joe Barerd",
       "Erin Frank"
@@ -80,16 +86,53 @@
     ]
   },
   {
-    "title": "2 SOON",
-    "projectId": "p1",
+    "title": "CANYON LIGHTS",
+    "projectId": "p16",
+    "groupId": "g7",
     "genres": [
-      "Jazz",
-      "Vocals",
-      "Experimental"
+      "Rock"
     ],
-    "runtime": "1m, 27 s",
-    "creationDate": "July 4",
-    "image": "/images/disc-32390_1280.webp",
-    "audioFile": "/audio/forca.mp3"
+    "instruments": [
+      "Drums",
+      "Vocals"
+    ],
+    "image": "/images/16.jpg",
+    "runtime": "2m, 21 s",
+    "creationDate": "September 19",
+    "audioFile": "/audio/forca.mp3",
+    "audioHistory": [
+      {
+        "label": "Sketch",
+        "file": "/audio/forca.mp3"
+      },
+      {
+        "label": "Studio",
+        "file": "/audio/forca.mp3"
+      },
+      {
+        "label": "my mix",
+        "file": "uploads/1746405146583-forca (6).mp3"
+      }
+    ]
+  },
+  {
+    "title": "My project",
+    "projectId": "9dd2c4d4-2aaf-40ef-9610-321fcb2e4698",
+    "groupId": "",
+    "members": [
+      "me",
+      "you"
+    ],
+    "runtime": "7m, 19s",
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "instruments": [
+      "Vocals",
+      "Guitar"
+    ],
+    "image": "uploads/1746405206744-7de7dc7a-c0bc-4a2c-a44c-fed76f134321_1646006400.jpeg",
+    "audioFile": "uploads/1746405206745-Speak Low.wav"
   }
 ]

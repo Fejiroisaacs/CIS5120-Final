@@ -4,13 +4,21 @@ import "../components/Style.css";
 import GroupCard from "../components/GroupCard";
 import groups from "../data/groups.json";
 import musicProjects from "../data/musicProjects.json";
+import user from "../data/users.json";
+
 
 const GroupsPage = () => {
+  const userGroupIds = user.groupIds || [];
+
+  const filteredGroups = groups.filter(group =>
+    userGroupIds.includes(group.groupId)
+  );
+
   return (
     <div>
       <PageHeader title="MY GROUPS" />
       <div className="group-list">
-        {groups.map((group, index) => {
+        {filteredGroups.map((group, index) => {
           const associatedProjects = musicProjects.filter(
             (project) => project.groupName === group.title
           );

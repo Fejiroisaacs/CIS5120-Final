@@ -27,26 +27,33 @@ const upload = multer({ storage: storage });
 // Path to the groups JSON file
 const groupsFilePath = path.join(__dirname, 'src/data', 'groups.json');
 const projectsFilePath = path.join(__dirname, 'src/data', 'myProjects.json');
+const usersFilePath = path.join(__dirname, 'src/data', 'users.json');
+
 
 // POST route to add a new group
 app.post('/api/add-group', (req, res) => {
   const newGroup = req.body;
 
-  if (!newGroup.name || !newGroup.members || !newGroup.groupId) {
+  if (!newGroup.groupId) {
     return res.status(400).json({ error: 'Missing required group fields' });
   }
 
   try {
-    const currentData = fs.readFileSync(groupsFilePath, 'utf-8');
-    const groups = JSON.parse(currentData);
+    const userData = fs.readFileSync(usersFilePath, 'utf-8');
+    const users = JSON.parse(userData);
 
-    groups.push(newGroup);
+    const user = users;
 
-    fs.writeFileSync(groupsFilePath, JSON.stringify(groups, null, 2));
+    if (!user.groupIds.includes(newGroup.groupId)) {
+      user.groupIds.push(newGroup.groupId);
+    }
+
+    fs.writeFileSync(usersFilePath, JSON.stringify(user, null, 2));
+
     res.status(200).json({ message: 'Group added successfully' });
   } catch (err) {
-    console.error('Error updating groups file:', err);
-    res.status(500).json({ error: 'Failed to update groups file' });
+    console.error('Error updating files:', err);
+    res.status(500).json({ error: 'Failed to update group or user file' });
   }
 });
 
@@ -66,6 +73,17 @@ app.post('/api/add-project', (req, res) => {
     groups.push(newProject);
 
     fs.writeFileSync(projectsFilePath, JSON.stringify(groups, null, 2));
+
+    const userData = fs.readFileSync(usersFilePath, 'utf-8');
+    const users = JSON.parse(userData);
+
+    const user = users;
+
+    if (!user.projectIds.includes(newProject.projectId)) {
+      user.projectIds.push(newProject.projectId);
+    }
+
+    fs.writeFileSync(usersFilePath, JSON.stringify(user, null, 2));
     res.status(200).json({ message: 'Project added successfully' });
   } catch (err) {
     console.error('Error updating groups file:', err);
@@ -95,7 +113,8 @@ app.post('/api/upload', upload.fields([
     genres: parseJsonArray(selectedGenres),
     instruments: parseJsonArray(selectedInstruments),
     image: `uploads/${req.files.image[0].filename}`,
-    audioFile: `uploads/${req.files.audio[0].filename}`
+    audioFile: `uploads/${req.files.audio[0].filename}`,
+    audioHistory: []
   };
 
   try {

@@ -47,6 +47,68 @@
       "p7",
       "p8"
     ],
-    "image": "/images/29.jpg"
-  }
-]
+    "image": "/images/14.jpg"
+  },
+  {
+      "name": "MOONWAVE SYNDICATE",
+      "groupId": "g4",
+      "members": [
+        "Lena OConnell",
+        "Marcus Flint",
+        "Tasha Greene",
+        "Noel Vega"
+      ],
+      "projectIds": ["p9", "p10"],
+      "image": "/images/14.jpg"
+    },
+    {
+      "name": "RIVERLIGHT COLLECTIVE",
+      "groupId": "g5",
+      "members": [
+        "Juno Park",
+        "Caleb Ortiz",
+        "Samantha Drew",
+        "Milo Hart",
+        "Joe Barerd"
+      ],
+      "projectIds": ["p11", "p12"],
+      "image": "/images/14.jpg"
+    },
+    {
+      "name": "THE ACOUSTIC FRONT",
+      "groupId": "g6",
+      "members": [
+        "Ella Knight",
+        "Tomás Reyes",
+        "Leah Fields",
+        "David Stone"
+      ],
+      "projectIds": ["p13", "p14", "p19"],
+      "image": "/images/14.jpg"
+    },
+    {
+      "name": "SUNDOWN STATIC",
+      "groupId": "g7",
+      "members": [
+        "Riley Kim",
+        "Jayden Marsh",
+        "Ivy Lin",
+        "Ben Cruz",
+        "Jordan Tate"
+      ],
+      "projectIds": ["p15", "p16", "p20"],
+      "image": "/images/14.jpg"
+    },
+    {
+      "name": "ECHO BLOOM",
+      "groupId": "g8",
+      "members": [
+        "Zara Wells",
+        "Nico Tran",
+        "Amira Khan",
+        "Theo Wallace"
+      ],
+      "projectIds": ["p17", "p18", "p21"],
+      "image": "/images/14.jpg"
+    }
+  ] 

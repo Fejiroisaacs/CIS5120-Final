@@ -1,12 +1,22 @@
 {
-    "User Info" : {
-        "ID" : 0,
-        "photo" : "uploads/1745109470348-MV5BZjBlNTYzNzAtNjkzYS00Yzk0LThiMWUtYjQ2ZDI1MzJhYzgxXkEyXkFqcGc@._V1_.jpg",
-        "name" : " Joe Barerd",
-        "bio" : "Played bass in a '70s garage band, still jams in mom's basement!",
-        "Instruments" : "Piano, Bass, Drums",
-        "Genres" : "Indie, Alternative, Rock"
-    },
-    "projectIds" : [ "p1", "p2", "p3"],
-    "groupIds" : ["g1", "g2", "g3"]
+  "User Info": {
+    "ID": 0,
+    "photo": "uploads/1745109470348-MV5BZjBlNTYzNzAtNjkzYS00Yzk0LThiMWUtYjQ2ZDI1MzJhYzgxXkEyXkFqcGc@._V1_.jpg",
+    "name": " Joe Barerd",
+    "bio": "Played bass in a '70s garage band, still jams in mom's basement!",
+    "Instruments": "Piano, Bass, Drums",
+    "Genres": "Indie, Alternative, Rock"
+  },
+  "projectIds": [
+    "pp1",
+    "pp2",
+    "pp3",
+    "p16"
+  ],
+  "groupIds": [
+    "g1",
+    "g2",
+    "g3",
+    "g7"
+  ]
 }

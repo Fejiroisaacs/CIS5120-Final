@@ -102,21 +102,15 @@ const ProjectCard = ({
   };
 
   const handleApplyToGroup = async () => {
-    const group = groupsData.find(g => g.groupId === groupId);
-    if (!group) {
-      console.error("Group not found!");
-      return;
-    }
-
     try {
       const response = await fetch("http://localhost:3001/api/add-group", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(group)
+        body: JSON.stringify({ groupId })  // ✅ send only groupId
       });
-
+  
       if (!response.ok) {
         const errorData = await response.json();
         setFeedback({
@@ -126,7 +120,7 @@ const ProjectCard = ({
         });
         throw new Error(errorData.error || "Failed to apply to group");
       }
-
+  
       console.log("Applied to group successfully!");
       setFeedback({
         show: true,
